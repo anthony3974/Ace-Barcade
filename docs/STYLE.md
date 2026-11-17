@@ -71,9 +71,13 @@ Flat, chunky cartoon: big simple shapes, one thick dark outline, colors from one
 
 One shared sound set (PLAN task 5), in one style. A game that needs a new sound adds it to the shared set, made the same way, so other games can use it too.
 
+## Cards and panels
+
+UI panels that stretch (the hub's cards) are 9-slice art: an SVG whose name ends in `_sliced`, with its rounded corners, outline and shade inside the outer 64 px, so they stay the same size however big the panel is. Game cards are Paper with a Cloud shade; empty "coming soon" slots are Slate with a Night shade.
+
 ## Game icons
 
-Every game has `Art/Games/G###_Name/icon.svg`, **exactly 360 x 360 px** **(checked)**: a rounded square (radius 56 px, Ink outline) showing the game's own background, with its main objects large in the middle, outlined like everything else. `Art/Games/G001_PaddleRally/icon.svg` is the template. No text on icons; the hub prints the title.
+Every game has `Art/Games/G###_Name/icon.svg`, **exactly 360 x 360 px** **(checked)**: a rounded square (radius 56 px, Ink outline) showing the game's own background, with its main objects large in the middle, outlined like everything else. `Art/Games/G001_PaddleRally/icon.svg` is the template. No text on icons; the hub prints the title. The icon is the thumbnail on the game's hub card, shown at about 200 px, so keep it bold and simple.
 
 ## New game checklist
 

@@ -11,6 +11,7 @@ namespace AceBarcade
     public sealed class ArcadeRoot : MonoBehaviour
     {
         public Hud Hud { get; private set; }
+        public Hub Hub { get; private set; }
 
 #if UNITY_EDITOR
         /// <summary>Set by the editor's Play Game tool: the id of the game to start in.</summary>
@@ -35,7 +36,10 @@ namespace AceBarcade
             var events = new GameObject("EventSystem", typeof(EventSystem));
             events.transform.SetParent(transform, false);
             events.AddComponent<InputSystemUIInputModule>().AssignDefaultActions();
+            // A finger wobbles more than a mouse: about 2 mm of movement before a press becomes a scroll.
+            events.GetComponent<EventSystem>().pixelDragThreshold = Mathf.Max(10, Mathf.RoundToInt(Screen.dpi * 0.08f));
 
+            Hub = Hub.Create(transform, cam.Cam);
             Hud = Hud.Create(transform, cam.Cam);
 
             foreach (var problem in GameRegistry.Validate(GameRegistry.All))
@@ -68,8 +72,6 @@ namespace AceBarcade
         public void ShowHub()
         {
             ClearGame(unloadSprites: true);
-            // The hub screen is PLAN task 4. Until then, the arcade opens the first game.
-            if (GameRegistry.All.Count > 0) { Launch(GameRegistry.All[0]); return; }
             Arcade.RaiseHubShown();
         }
 

@@ -6,11 +6,11 @@ It's a personal project and won't be published to a store.
 
 ## Current state
 
-One game so far: **Paddle Rally** (drag to keep a ball out of the spikes), waiting on its first playtest on a phone. Around it is the shared kit every game uses: the HUD (score, best, pause, game-over card), the font, one-finger input, the portrait camera, best scores, game feel (squash, pop, shake, bursts) and the art pipeline with its style check. The hub screen and sound are next. See [PLAN.md](PLAN.md) for what's next, [docs/STYLE.md](docs/STYLE.md) for the house style every game follows, and [docs/CONVENTIONS.md](docs/CONVENTIONS.md) for how the code is organised and how to add a game.
+The app opens on the hub: a scrolling grid of game cards, two across and six down, each with the game's thumbnail, title and best score. One game so far: **Paddle Rally** (drag to keep a ball out of the spikes), waiting on its first playtest on a phone. Around it is the shared kit every game uses: the HUD (score, best, pause, game-over card), the font, one-finger input, the portrait camera, best scores, game feel (squash, pop, shake, bursts) and the art pipeline with its style check. Sound is next. See [PLAN.md](PLAN.md) for what's next, [docs/STYLE.md](docs/STYLE.md) for the house style every game follows, and [docs/CONVENTIONS.md](docs/CONVENTIONS.md) for how the code is organised and how to add a game.
 
 ## Playing
 
-On the phone everything is one thumb: tap, hold, drag or swipe, depending on the game. Android's Back button pauses a game.
+On the phone everything is one thumb: tap, hold, drag or swipe, depending on the game. Tap a card in the hub to play. Android's Back button pauses a game, goes back to the hub from the pause or game-over screen, and closes the app from the hub.
 
 | # | Game | Controls | How to play |
 |---|---|---|---|

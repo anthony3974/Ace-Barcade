@@ -13,7 +13,6 @@ namespace AceBarcade
     {
         const float OverDelay = 0.6f;
 
-        Canvas _canvas;
         TextMeshProUGUI _score, _best, _title, _blurb, _tapToStart;
         TextMeshProUGUI _overScore, _overBest, _newBest;
         GameObject _top, _ready, _paused, _over, _dim, _pauseButton;
@@ -23,28 +22,14 @@ namespace AceBarcade
 
         public static Hud Create(Transform parent, Camera cam)
         {
-            var go = new GameObject("Hud", typeof(RectTransform));
-            go.layer = 5;
-            go.transform.SetParent(parent, false);
-            var hud = go.AddComponent<Hud>();
-            hud.Build(cam);
+            var canvas = UiKit.MakeCanvas(parent, "Hud", cam, 100);
+            var hud = canvas.gameObject.AddComponent<Hud>();
+            hud.Build();
             return hud;
         }
 
-        void Build(Camera cam)
+        void Build()
         {
-            _canvas = gameObject.AddComponent<Canvas>();
-            _canvas.renderMode = RenderMode.ScreenSpaceCamera;
-            _canvas.worldCamera = cam;
-            _canvas.planeDistance = 5f;
-            _canvas.sortingOrder = 100;
-            var scaler = gameObject.AddComponent<CanvasScaler>();
-            scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
-            scaler.referenceResolution = new Vector2(UiKit.ReferenceWidth, UiKit.ReferenceHeight);
-            scaler.screenMatchMode = CanvasScaler.ScreenMatchMode.MatchWidthOrHeight;
-            scaler.matchWidthOrHeight = 0f; // the world is a fixed width, so the UI is too
-            gameObject.AddComponent<GraphicRaycaster>();
-
             // Dims the game behind the pause and game-over screens, and blocks touches to it.
             var dim = UiKit.MakeImage(transform, "Dim", Shapes.Square, Palette.Ink.WithAlpha(0.72f), blocksTouches: true);
             dim.rectTransform.Fill();

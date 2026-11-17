@@ -8,7 +8,7 @@ How the arcade is put together, and how a game plugs into it. The look is in [ST
 - A game is a C# class that extends `ArcadeGame` and carries an `[ArcadeGame(...)]` attribute. `GameRegistry` finds every such class by itself: there is no list of games to edit.
 - A game builds its whole world **in code**, in `Build()`, as children of its own object. Leaving or retrying a game destroys that object and builds a fresh one, so a game never resets itself.
 - `Arcade` (static) is where code finds the running pieces: `Arcade.Input`, `Arcade.Camera`, `Arcade.Current`. `Arcade.Launch`, `Arcade.Retry` and `Arcade.ShowHub` move between games.
-- `ArcadeRoot` also makes the shared `Hud` and the EventSystem. The HUD reads the current game's state and score every frame; games never talk to it.
+- `ArcadeRoot` also makes the `Hub` (the main menu), the shared `Hud` and the EventSystem. The app opens on the hub, which shows a card per registered game: nothing to add there for a new game except its `icon.svg`. The HUD reads the current game's state and score every frame; games never talk to it.
 - **The arcade owns the flow, the same for every game:** Ready ("tap to start") → Playing → Paused → Over (score card). A game only builds, plays, adds score and calls `EndRun()`.
 - To play a game in the editor: **Tools > Ace Barcade > Play Game...**
 - **Paddle Rally (`Assets/Games/G001_PaddleRally/`) is the reference game.** When in doubt, copy what it does: rules in a plain C# class (`RallySim`) with edit mode tests, a thin `ArcadeGame` that draws the rules and adds the feel, and a play mode test that plays it.
@@ -73,7 +73,8 @@ Assets/
     Core/                    Arcade, ArcadeRoot, ArcadeGame, GameRegistry, ArcadeInput,
                              GestureTracker, ArcadeCamera, Palette, Style, Scores, Sprites,
                              Shapes, Juice
-    UI/                      Hud (the shared HUD), UiKit (text, buttons, safe area)
+    UI/                      Hub (main menu and its cards), Hud (the shared HUD),
+                             UiKit (canvases, text, buttons, 9-slices, safe area)
     Tests/                   edit mode tests (AceBarcade.Tests)
     Tests/PlayMode/          play mode tests (AceBarcade.PlayTests), one file per game
   Games/                     AceBarcade.Games assembly: every game

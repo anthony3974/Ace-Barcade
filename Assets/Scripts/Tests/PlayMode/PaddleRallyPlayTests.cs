@@ -41,11 +41,19 @@ namespace AceBarcade.PlayTests
 
         static PaddleRally Game => (PaddleRally)Arcade.Current;
 
+        /// <summary>The arcade opens on the hub; start Paddle Rally from there.</summary>
+        static IEnumerator StartGame()
+        {
+            yield return Frames(3);
+            Arcade.Launch(GameRegistry.Find("paddle-rally"));
+            yield return Frames(2);
+            Assert.IsInstanceOf<PaddleRally>(Arcade.Current);
+        }
+
         [UnityTest]
         public IEnumerator Rally_ScoresWhileFollowed_EndsWhenMissed_AndRetries()
         {
-            yield return Frames(3);
-            Assert.IsInstanceOf<PaddleRally>(Arcade.Current, "the arcade opens the first game until the hub exists");
+            yield return StartGame();
             Assert.AreEqual(ArcadeGame.Phase.Ready, Game.State);
             yield return Capture("1-ready");
 
@@ -101,7 +109,7 @@ namespace AceBarcade.PlayTests
         [UnityTest]
         public IEnumerator BackButton_PausesWhilePlaying()
         {
-            yield return Frames(3);
+            yield return StartGame();
             Arcade.Input.Simulate(true, new Vector2(0f, -7f));
             yield return Frames(2);
             Assert.AreEqual(ArcadeGame.Phase.Playing, Game.State);
@@ -111,7 +119,7 @@ namespace AceBarcade.PlayTests
         }
 
         /// <summary>Saves a 1080 x 1920 screenshot when ACE_CAPTURE_DIR is set.</summary>
-        static IEnumerator Capture(string name)
+        internal static IEnumerator Capture(string name)
         {
             var dir = System.Environment.GetEnvironmentVariable("ACE_CAPTURE_DIR");
             if (string.IsNullOrEmpty(dir) || SystemInfo.graphicsDeviceType == UnityEngine.Rendering.GraphicsDeviceType.Null) yield break;

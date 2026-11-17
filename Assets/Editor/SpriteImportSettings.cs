@@ -11,6 +11,12 @@ namespace AceBarcade.EditorTools
     {
         const string Folder = "Assets/Resources/Sprites/";
 
+        /// <summary>
+        /// Art whose name ends in "_sliced" is a 9-slice: its corners (this many px) stay sharp
+        /// and the middle stretches, so one small sprite makes a card of any size.
+        /// </summary>
+        public const int SlicedBorderPx = 64;
+
         void OnPreprocessTexture()
         {
             if (!assetPath.StartsWith(Folder)) return;
@@ -25,6 +31,8 @@ namespace AceBarcade.EditorTools
             ti.filterMode = UnityEngine.FilterMode.Bilinear;
             ti.maxTextureSize = 2048;
             ti.textureCompression = TextureImporterCompression.Compressed;
+            bool sliced = System.IO.Path.GetFileNameWithoutExtension(assetPath).EndsWith("_sliced");
+            ti.spriteBorder = sliced ? UnityEngine.Vector4.one * SlicedBorderPx : UnityEngine.Vector4.zero;
         }
     }
 }

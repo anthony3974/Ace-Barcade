@@ -23,6 +23,39 @@ namespace AceBarcade
 
         public enum ButtonKind { Primary, Secondary }
 
+        /// <summary>
+        /// A full-screen canvas drawn by the arcade camera, 1080 px wide on every phone. Sprites
+        /// map 1:1 to reference px (120 px per unit, like the art), so a 9-slice's 8 px outline
+        /// stays 8 px.
+        /// </summary>
+        public static Canvas MakeCanvas(Transform parent, string name, Camera cam, int sortingOrder)
+        {
+            var go = new GameObject(name, typeof(RectTransform));
+            go.layer = 5;
+            go.transform.SetParent(parent, false);
+            var canvas = go.AddComponent<Canvas>();
+            canvas.renderMode = RenderMode.ScreenSpaceCamera;
+            canvas.worldCamera = cam;
+            canvas.planeDistance = 5f;
+            canvas.sortingOrder = sortingOrder;
+            var scaler = go.AddComponent<CanvasScaler>();
+            scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
+            scaler.referenceResolution = new Vector2(ReferenceWidth, ReferenceHeight);
+            scaler.screenMatchMode = CanvasScaler.ScreenMatchMode.MatchWidthOrHeight;
+            scaler.matchWidthOrHeight = 0f; // the world is a fixed width, so the UI is too
+            scaler.referencePixelsPerUnit = Style.PixelsPerUnit;
+            go.AddComponent<GraphicRaycaster>();
+            return canvas;
+        }
+
+        /// <summary>A stretchy 9-slice image from Art/Shared/UI (a name ending in "_sliced").</summary>
+        public static Image MakeSliced(Transform parent, string name, string sprite, bool blocksTouches = false)
+        {
+            var img = MakeImage(parent, name, Sprites.Get("Shared/UI/" + sprite), Color.white, blocksTouches);
+            img.type = Image.Type.Sliced;
+            return img;
+        }
+
         public static RectTransform Rect(Transform parent, string name)
         {
             var go = new GameObject(name, typeof(RectTransform));

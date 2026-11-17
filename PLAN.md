@@ -34,7 +34,7 @@ Each task is small enough for one session and ends with a check. Tick it off whe
 
 Unity locks the project while the editor is open, so change Project Settings through `Assets/Editor/ProjectSetup.cs` (**Tools > Ace Barcade > Apply Project Settings**) rather than the settings window or the files on disk.
 
-**Status (2026-11-17):** Game 001, **Paddle Rally**, is built and plays end to end with the shared HUD (score, best, pause, tap to start, pause screen, game-over card), the arcade font, the shared feel (squash, pop, shake, bursts) and the first Android build (`Builds/AceBarcade.apk`, made by **Tools > Ace Barcade > Build APK**). 21 edit mode and 2 play mode tests pass. It's waiting on the owner's phone playtest (tasks 3 and 6). The hub and sound are still to come; until the hub exists, the arcade opens the first game.
+**Status (2026-11-17):** Game 001, **Paddle Rally**, is built and plays end to end with the shared HUD (score, best, pause, tap to start, pause screen, game-over card), the arcade font, the shared feel (squash, pop, shake, bursts) and the first Android build (`Builds/AceBarcade.apk`, made by **Tools > Ace Barcade > Build APK**). 21 edit mode and 2 play mode tests pass. It's waiting on the owner's phone playtest (tasks 3 and 6). The hub (main menu) is built too: the app opens on it. Sound is still to come.
 
 ### Setup
 - [x] **1. Project and repo.** Universal 2D project, identity `Tony3974`, product `Ace Barcade`, id `com.Tony3974.AceBarcade`. Android, portrait, IL2CPP ARM64, min API 24, no HDR or MSAA. Assemblies: `AceBarcade` (shared), `AceBarcade.Games`, `AceBarcade.Editor`, `AceBarcade.Tests`, `AceBarcade.PlayTests`. The core: `ArcadeGame`, `GameRegistry`, `ArcadeInput` (tap, hold, drag, swipe, Back), `ArcadeCamera` (fixed 9 x 16 view), `Scores`, `Sprites`, `Palette`, `Style`. *Check: edit mode tests pass, and the repo is on GitHub.*
@@ -44,20 +44,25 @@ Unity locks the project while the editor is open, so change Project Settings thr
 The style sheet was folded into Game 001: its art, the shared UI art and the font are the sample.
 - [ ] **3. The look on a phone.** Font: **Lilita One** (SIL Open Font License, `Assets/Fonts`), made into a TextMeshPro font with the Ink outline by `FontSetup.cs`. Shared UI art in `Art/Shared/UI` (primary and secondary buttons, the pause button, the game-over card). **Tools > Ace Barcade > Build APK**. Built; waiting on the owner. *Check: the owner likes how it looks on their phone. Adjust the palette or `docs/STYLE.md` now if anything looks wrong, before more games depend on it.*
 - [ ] **6. Game 001: Paddle Rally.** Drag to slide a paddle along the bottom and keep the ball out of the red spikes. Each return scores 1 and speeds the ball up; where the ball lands on the paddle sets its angle. Every 4 returns a teal gem appears up the court, worth 5. Rules in `RallySim` (plain C#, 10 edit mode tests); a play mode test plays a rally, pauses, loses and retries. Built; waiting on the owner's phone playtest. *Check: each item below plays as described on the phone.*
-  - **Install:** copy `Builds/AceBarcade.apk` to the phone and open it (allow installs from this source once). The app opens straight into Paddle Rally, in portrait.
+  - **Install:** copy `Builds/AceBarcade.apk` to the phone and open it (allow installs from this source once). It opens on the hub, in portrait; tap Paddle Rally.
   - **Ready:** the title, "Keep the ball out of the spikes" and a pulsing TAP TO START. The ball rests on the paddle.
   - **Control:** touching starts the rally. The paddle follows your finger left and right (touch anywhere below it), quickly but not instantly, and stops at the walls.
   - **Rally:** the score goes up by 1 on each return with a little squash and spark. The ball gets faster each time. Hitting near the paddle's ends sends it off at a sharp angle.
   - **Gem:** after every 4th return a teal gem pops in up the court. Hitting it with the ball scores 5 with a teal burst.
   - **Losing:** a missed ball drops into the spikes with a red burst and a big shake. About half a second later the game-over card shows the score, the best, and NEW BEST! the first time.
-  - **Retry and Arcade:** RETRY starts a fresh run at 0. ARCADE goes to the hub (for now, a fresh Paddle Rally).
+  - **Retry and Arcade:** RETRY starts a fresh run at 0. ARCADE goes back to the hub.
   - **Pause:** the pause button (top right) and the phone's Back button both pause. Tapping the pause button doesn't move the paddle. RESUME carries on; Back on the pause screen leaves.
   - **Screen:** the score and pause button sit clear of the notch. Text and outlines look sharp. It runs smoothly.
   - **Feel:** the speed ramp is fun, not too slow at the start, not impossible by about 25 returns.
 
 ### Arcade shell
 The shared HUD (score, best, pause, tap to start, pause screen, game-over card, safe area) and the shared feel (`Juice`: squash, pop, shake, bursts) were built with Game 001.
-- [ ] **4. The hub.** A scrolling grid of game cards (icon, number, title, best score), built from each game's `icon.svg`. The app opens on it; ARCADE and Back return to it; Back in the hub quits. *Check: on the phone, hub → Paddle Rally → game over → ARCADE → hub, with the best score shown on the card.*
+- [ ] **4. The hub.** The main menu: an ACE BARCADE header, then a scrolling grid of game cards, **2 columns x 6 rows** a screen on every phone (cards are sized from the screen). Each card shows the game's icon as a thumbnail on the left, and its number, controls, title and best score on the right. Until there are 12 games, "coming soon" cards fill the empty slots. The app opens on it; ARCADE and Back return to it; Back in the hub quits the app. Cards use a 9-slice tile (`Art/Shared/UI/tile_sliced.svg`). 4 play mode tests, including scrolling with 13 games. Built; waiting on the owner's phone check. *Check, on the phone:*
+  - The app opens on the hub: Paddle Rally's card top left, eleven "coming soon" cards, two columns and six rows filling the screen below the header.
+  - Tapping the Paddle Rally card starts it. Dragging on the grid doesn't start a game.
+  - After a game over, ARCADE returns to the hub, and the card shows the new best.
+  - Back on the pause or game-over screen returns to the hub; Back in the hub closes the app.
+  - The header sits clear of the notch.
 - [ ] **5. Sound and haptics.** The shared sound set (tap, return or score, hit, lose, new best, UI click) in one style, a short buzz on hits, and a mute toggle in the hub. Paddle Rally uses them. *Check: it sounds and feels good on the phone, and mute works.*
 
 ### Games
@@ -82,4 +87,5 @@ A pool to pick from, one thumb, portrait. Working titles only; every game gets i
 ## Maybe later
 - A daily challenge game with its own leaderboard on the phone.
 - Hub sorting and filters (by controls, most played) once there are more than about 30 games.
+- Past about 100 games, only build the hub cards that are on screen (a recycled list) so the hub stays fast and light.
 - Split the games assembly into batches if compiling gets slow; move game art to Addressables if the build gets big (see [docs/CONVENTIONS.md](docs/CONVENTIONS.md)).
