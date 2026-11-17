@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem.UI;
 
 namespace AceBarcade
 {
@@ -8,6 +10,8 @@ namespace AceBarcade
     /// </summary>
     public sealed class ArcadeRoot : MonoBehaviour
     {
+        public Hud Hud { get; private set; }
+
 #if UNITY_EDITOR
         /// <summary>Set by the editor's Play Game tool: the id of the game to start in.</summary>
         public const string StartGameKey = "AceBarcade.StartGame";
@@ -27,6 +31,12 @@ namespace AceBarcade
             var input = new GameObject("Input").AddComponent<ArcadeInput>();
             input.transform.SetParent(transform, false);
             Arcade.Input = input;
+
+            var events = new GameObject("EventSystem", typeof(EventSystem));
+            events.transform.SetParent(transform, false);
+            events.AddComponent<InputSystemUIInputModule>().AssignDefaultActions();
+
+            Hud = Hud.Create(transform, cam.Cam);
 
             foreach (var problem in GameRegistry.Validate(GameRegistry.All))
                 Debug.LogError($"[Arcade] {problem}");

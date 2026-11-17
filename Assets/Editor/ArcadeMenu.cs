@@ -21,6 +21,28 @@ namespace AceBarcade.EditorTools
         [MenuItem("Tools/Ace Barcade/Check Art Style", priority = 21)]
         static void CheckStyle() => Run("Art/check-style.sh");
 
+        public const string ApkPath = "Builds/AceBarcade.apk";
+
+        /// <summary>Builds the Android app to Builds/AceBarcade.apk. Batch mode: -executeMethod AceBarcade.EditorTools.ArcadeMenu.BuildApk</summary>
+        [MenuItem("Tools/Ace Barcade/Build APK", priority = 40)]
+        public static void BuildApk()
+        {
+            Directory.CreateDirectory("Builds");
+            var report = UnityEditor.BuildPipeline.BuildPlayer(new UnityEditor.BuildPlayerOptions
+            {
+                scenes = new[] { ProjectSetup.ScenePath },
+                locationPathName = ApkPath,
+                target = BuildTarget.Android,
+                options = BuildOptions.None,
+            });
+            var s = report.summary;
+            if (s.result == UnityEditor.Build.Reporting.BuildResult.Succeeded)
+                Debug.Log($"[Ace Barcade] Built {ApkPath} ({new FileInfo(ApkPath).Length / (1024f * 1024f):0.0} MB)");
+            else
+                Debug.LogError($"[Ace Barcade] APK build {s.result}: {s.totalErrors} error(s)");
+            if (Application.isBatchMode) EditorApplication.Exit(s.result == UnityEditor.Build.Reporting.BuildResult.Succeeded ? 0 : 1);
+        }
+
         [MenuItem("Tools/Ace Barcade/Play Game...", priority = 0)]
         static void PlayGame() => EditorWindow.GetWindow<PlayGameWindow>(true, "Play Game");
 

@@ -97,8 +97,6 @@ namespace AceBarcade
             Time.timeScale = 1f;
         }
 
-        float _overFor;
-
         void Update()
         {
             var input = Input;
@@ -122,15 +120,10 @@ namespace AceBarcade
                     Play(Time.deltaTime);
                     break;
 
+                // The HUD's buttons handle Resume and Retry; Back leaves for the arcade.
                 case Phase.Paused:
-                    if (input.Back || input.Tapped) Resume();
-                    break;
-
                 case Phase.Over:
-                    // Until the shared HUD has its game-over card, a tap retries and Back leaves.
-                    _overFor += Time.unscaledDeltaTime;
                     if (input.Back) Arcade.ShowHub();
-                    else if (_overFor > 0.6f && input.Tapped) Arcade.Retry();
                     break;
             }
         }

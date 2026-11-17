@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 namespace AceBarcade
@@ -39,16 +41,64 @@ namespace AceBarcade
         /// <summary>The Android Back button (Escape in the editor) was pressed this frame.</summary>
         public bool Back { get; private set; }
 
+        // A touch that starts on a HUD button belongs to the HUD, not the game, until it lifts.
+        bool _touchOnUi;
+        readonly List<RaycastResult> _hits = new List<RaycastResult>();
+
+        // Play mode tests drive the finger through Simulate instead of real input.
+        bool _simulating, _simPressed, _simBack;
+        Vector2 _simPosition;
+
+        /// <summary>For tests: from now on the finger is wherever this says (world units).</summary>
+        public void Simulate(bool pressed, Vector2 worldPosition, bool back = false)
+        {
+            _simulating = true;
+            _simPressed = pressed;
+            _simPosition = worldPosition;
+            _simBack = back;
+        }
+
         void Update()
         {
-            var pointer = Pointer.current;
-            bool pressed = pointer != null && pointer.press.isPressed;
+            bool pressed;
             Vector2 world = _gestures.Position;
-            if (pointer != null && Arcade.Camera != null)
-                world = Arcade.Camera.ScreenToWorld(pointer.position.ReadValue());
+
+            if (_simulating)
+            {
+                pressed = _simPressed;
+                world = _simPosition;
+                Back = _simBack;
+                _simBack = false;
+            }
+            else
+            {
+                var pointer = Pointer.current;
+                pressed = pointer != null && pointer.press.isPressed;
+                if (pointer != null && Arcade.Camera != null)
+                {
+                    var screen = pointer.position.ReadValue();
+                    world = Arcade.Camera.ScreenToWorld(screen);
+                    if (pressed && !_gestures.Pressed && !_touchOnUi) _touchOnUi = OverUi(screen);
+                }
+                Back = Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame;
+            }
+
+            if (_touchOnUi)
+            {
+                if (!pressed) _touchOnUi = false;
+                pressed = false;
+            }
 
             _gestures.Step(pressed, world, Time.unscaledTime);
-            Back = Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame;
+        }
+
+        bool OverUi(Vector2 screen)
+        {
+            var es = EventSystem.current;
+            if (es == null) return false;
+            _hits.Clear();
+            es.RaycastAll(new PointerEventData(es) { position = screen }, _hits);
+            return _hits.Count > 0;
         }
     }
 }

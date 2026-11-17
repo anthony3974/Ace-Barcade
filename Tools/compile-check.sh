@@ -17,7 +17,12 @@ DOTNET="$UNITY/Data/NetCoreRuntime/dotnet"
 CSC="$UNITY/Data/DotNetSdkRoslyn/csc.dll"
 [[ -x "$DOTNET" && -f "$CSC" ]] || { echo "Unity $VERSION not found at $UNITY (set UNITY_EDITOR_DIR)" >&2; exit 2; }
 
-RSP="$(ls -t Library/Bee/artifacts/*.dag/AceBarcade.rsp 2>/dev/null | head -1 || true)"
+# The newest editor compile of the shared assembly (player builds leave rsp files without
+# UNITY_EDITOR, which can't compile editor code).
+RSP=""
+for f in $(ls -t Library/Bee/artifacts/*.dag/AceBarcade.rsp 2>/dev/null); do
+    if grep -q -- '-define:UNITY_EDITOR$' "$f"; then RSP="$f"; break; fi
+done
 [[ -n "$RSP" ]] || { echo "No Library/ yet: open the project in Unity once first." >&2; exit 2; }
 
 OUT="$(mktemp -d)"
@@ -70,10 +75,15 @@ compile AceBarcade.Games "$OUT/games.src" "$OUT/games.extra"
 
 # Editor tools (Assets/Editor)
 find Assets/Editor -name '*.cs' | sort > "$OUT/editor.src"
-{ echo "$RUNTIME"; own AceBarcade AceBarcade.Games; } > "$OUT/editor.extra"
+{ echo "$RUNTIME"; pkg Unity.TextMeshPro.Editor; own AceBarcade AceBarcade.Games; } > "$OUT/editor.extra"
 compile AceBarcade.Editor "$OUT/editor.src" "$OUT/editor.extra"
 
 # Edit mode tests (Assets/Scripts/Tests)
-find Assets/Scripts/Tests -name '*.cs' | sort > "$OUT/tests.src"
+find Assets/Scripts/Tests -name '*.cs' -not -path 'Assets/Scripts/Tests/PlayMode/*' | sort > "$OUT/tests.src"
 { echo "$RUNTIME"; echo "$TEST"; own AceBarcade AceBarcade.Games; } > "$OUT/tests.extra"
 compile AceBarcade.Tests "$OUT/tests.src" "$OUT/tests.extra"
+
+# Play mode tests (Assets/Scripts/Tests/PlayMode)
+find Assets/Scripts/Tests/PlayMode -name '*.cs' | sort > "$OUT/play.src"
+{ echo "$RUNTIME"; echo "$TEST"; own AceBarcade AceBarcade.Games; } > "$OUT/play.extra"
+compile AceBarcade.PlayTests "$OUT/play.src" "$OUT/play.extra"

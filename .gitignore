@@ -54,6 +54,7 @@ crashlytics-build.properties
 *.unitypackage
 *.app
 *_BurstDebugInformation_DoNotShip/
+.utmp/
 *.keystore
 *.jks
 

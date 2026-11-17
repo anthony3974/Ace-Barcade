@@ -21,6 +21,7 @@ namespace AceBarcade.EditorTools
         {
             ApplyPlayerSettings();
             ApplyRenderSettings();
+            FontSetup.Ensure();
             CreateScene();
             AssetDatabase.SaveAssets();
             Debug.Log("[Ace Barcade] Project settings applied.");
