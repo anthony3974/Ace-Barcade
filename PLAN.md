@@ -34,7 +34,7 @@ Each task is small enough for one session and ends with a check. Tick it off whe
 
 Unity locks the project while the editor is open, so change Project Settings through `Assets/Editor/ProjectSetup.cs` (**Tools > Ace Barcade > Apply Project Settings**) rather than the settings window or the files on disk.
 
-**Status (2026-11-17):** Game 001, **Paddle Rally**, is built and plays end to end with the shared HUD (score, best, pause, tap to start, pause screen, game-over card), the arcade font, the shared feel (squash, pop, shake, bursts) and the first Android build (`Builds/AceBarcade.apk`, made by **Tools > Ace Barcade > Build APK**). 21 edit mode and 2 play mode tests pass. It's waiting on the owner's phone playtest (tasks 3 and 6). The hub (main menu) is built too: the app opens on it. Sound is still to come. Game 002, **Drop Stack**, is merged (task 7). Game 003, **Brick Burst**, is merged (task 8). Game 004, **Rocket Lanes**, is merged (task 9).
+**Status (2026-11-17):** Game 001, **Paddle Rally**, is built and plays end to end with the shared HUD (score, best, pause, tap to start, pause screen, game-over card), the arcade font, the shared feel (squash, pop, shake, bursts) and the first Android build (`Builds/AceBarcade.apk`, made by **Tools > Ace Barcade > Build APK**). 21 edit mode and 2 play mode tests pass. It's waiting on the owner's phone playtest (tasks 3 and 6). The hub (main menu) is built too: the app opens on it. Sound is still to come. Game 002, **Drop Stack**, is merged (task 7). Game 003, **Brick Burst**, is merged (task 8). Game 004, **Rocket Lanes**, is merged (task 9). Next game: 005, **Paddle Duel** (task 10); every game and its number is in the [games list](#games-list).
 
 ### Setup
 - [x] **1. Project and repo.** Universal 2D project, identity `Tony3974`, product `Ace Barcade`, id `com.Tony3974.AceBarcade`. Android, portrait, IL2CPP ARM64, min API 24, no HDR or MSAA. Assemblies: `AceBarcade` (shared), `AceBarcade.Games`, `AceBarcade.Editor`, `AceBarcade.Tests`, `AceBarcade.PlayTests`. The core: `ArcadeGame`, `GameRegistry`, `ArcadeInput` (tap, hold, drag, swipe, Back), `ArcadeCamera` (fixed 9 x 16 view), `Scores`, `Sprites`, `Palette`, `Style`. *Check: edit mode tests pass, and the repo is on GitHub.*
@@ -66,7 +66,7 @@ The shared HUD (score, best, pause, tap to start, pause screen, game-over card, 
 - [ ] **5. Sound and haptics.** The shared sound set (tap, return or score, hit, lose, new best, UI click) in one style, a short buzz on hits, and a mute toggle in the hub. Paddle Rally uses them. *Check: it sounds and feels good on the phone, and mute works.*
 
 ### Games
-Pick each next game with the owner. Each game is one task: art, code, icon, tests for its rules, a play mode test, and the new game checklist in `docs/STYLE.md`. *Check for every game: it plays well on the phone and looks at home next to the others.*
+Take the next game from the [games list](#games-list) (or swap the order with the owner). Each game is one task: art, code, icon, tests for its rules, a play mode test, and the new game checklist in `docs/STYLE.md`. *Check for every game: it plays well on the phone and looks at home next to the others.*
 - [ ] **7. Game 002: Drop Stack** (on the `tetris` branch). A falling-block puzzle: pieces fall into an 8 x 14 well, and a full row clears. Our own take on the genre: its own name and house-style look, a smaller well, our own set of six pieces mixing 3-block and 4-block shapes, and teal gem blocks worth 25 when their row clears. Clearing 1, 2, 3 or 4 rows at once scores 10, 30, 60 or 100 (times the level); every 8 rows is a level, and pieces fall faster. Rules in `DropSim` (12 edit mode tests); 2 play mode tests play it with simulated touches. Built; waiting on the owner's phone playtest. *Check, on the phone:*
   - Drop Stack's card is in the hub next to Paddle Rally; tapping it shows the title and TAP TO START, with the next piece shown small above the well.
   - **Tap** turns the piece (the tap that starts the game doesn't). Next to a wall it slides out to turn.
@@ -94,22 +94,39 @@ Pick each next game with the owner. Each game is one task: art, code, icon, test
   - Hitting a mine gives a red burst and a big shake, then the game-over card.
   - It speeds up as you go, and late in a run (about 50 rows in, top speed) it's hard but still winnable.
   - Stars drift slower than the lane dashes, so space has depth. Nothing important hides under the score.
+- [ ] **10. Game 005: Paddle Duel.** Two-paddle table tennis against the computer, in portrait: your yellow paddle along the bottom (drag), the computer's purple paddle along the top, side walls to bank shots off. Paddle Rally's ball and paddle feel (shared props in `Art/Shared/Props`), with where the ball hits your paddle setting its angle. A point you win (the ball gets past the computer) scores 5, and each return scores 1. You have three balls, like Brick Burst; missing costs one, and losing the third ends the run. Each point you win makes the ball a little faster and the computer a little sharper, up to a cap. **The computer plays fair:** it only sees the ball after a short reaction delay, moves at a capped speed, and aims with a little error, so sharp angles near your paddle's ends beat it. All of that is constants in `DuelSim`, with edit mode tests that a perfect shot gets past it at every skill level and that it returns easy balls. A play mode test plays points both ways, loses three balls and retries. *Check, on the phone:*
+  - Paddle Duel's card is in the hub; the start screen shows both paddles and the ball resting on yours.
+  - Your paddle feels exactly like Paddle Rally's.
+  - The computer moves smoothly, never teleports, and misses sometimes; angled shots off your paddle's ends beat it more often.
+  - Winning a point bursts and shakes, and scores 5; missing costs one of three balls.
+  - It gets harder as you win points, but stays winnable.
 
-## Game ideas
-A pool to pick from, one thumb, portrait. Working titles only; every game gets its own original name and look.
-- ~~**Paddle and ball:**~~ done as Paddle Rally (Game 001).
-- ~~**Lane runner:**~~ done as Rocket Lanes (Game 004).
-- ~~**Brick breaker:**~~ done as Brick Burst (Game 003).
-- **Snake:** grow a snake by eating, without hitting yourself (swipe).
-- **Stacker:** drop sliding blocks on a tower and keep it straight (tap).
-- ~~**Falling blocks:**~~ done as Drop Stack (Game 002).
-- **Cave flyer:** hold to rise, let go to fall, through a narrowing cave (hold).
-- **Bouncer:** a ball that bounces on its own; steer it from platform to platform upward (drag).
-- **Whack:** tap things as they pop up, but not the Red ones (tap).
-- **Dodge field:** drag around to avoid falling hazards while grabbing pickups (drag).
-- **Slicer:** swipe through flying objects, not the Red ones (swipe).
-- **Timing ring:** tap when a spinning marker crosses the target (tap).
-- **Gap jumper:** a side-on runner that jumps on tap, over gaps and Red spikes (tap).
+## Games list
+Every game, built or planned, with its number and id. **This list is where numbers come from.** Before starting a game, take the first planned row and mark it *In progress* here, so two branches never take the same number (Brick Burst and Rocket Lanes both reached for 003 once). Numbers are never reused, and an id never changes once the game is on the phone, because best scores are saved under it. A planned game's title and id are working names and can still change before it's built. Every game gets its own original name and look (see *Not to copy*).
+
+| # | Id | Title | Controls | Genre | Status | Task |
+|---|---|---|---|---|---|---|
+| 001 | `paddle-rally` | Paddle Rally | Drag | Paddle and ball | Built, on main; waiting on phone check | 6 |
+| 002 | `drop-stack` | Drop Stack | Drag | Falling blocks | Built, on main; waiting on phone check | 7 |
+| 003 | `brick-burst` | Brick Burst | Drag | Brick breaker | Built, on main; waiting on phone check | 8 |
+| 004 | `rocket-lanes` | Rocket Lanes | Swipe | Lane runner | Built, on main; waiting on phone check | 9 |
+| 005 | `paddle-duel` | Paddle Duel | Drag | Two-paddle table tennis against the computer | **Next** | 10 |
+| 006 | `slide-nine` | Slide Nine | Tap | Sliding puzzle: 3 x 3 tiles with one empty slot; tap a tile next to the gap to slide it. A shuffle button, and a move counter or timer. Best scores keep the highest number, so the score has to go up for playing well (for example points that drop with every move, or puzzles solved against the clock) | Planned | |
+| 007 | `noodle` | Noodle | Swipe | Snake: swipe to steer; grow by eating, without hitting yourself | Planned | |
+| 008 | `wing-it` | Wing It | Tap | Flappy-style flyer: one tap to flap through gaps | Planned | |
+| 009 | `pop-up` | Pop Up | Tap | Whack-a-mole: reflex taps on things as they pop up, but not the red ones | Planned | |
+| 010 | `bounce-up` | Bounce Up | Hold | Endless jumper: bounce up from platform to platform; hold the left or right half of the screen to steer (the halves are the "two buttons": games don't draw their own buttons) | Planned | |
+| 011 | `star-swarm` | Star Swarm | Drag (TBD) | Galaga-style shooter: a ship along the bottom, waves of enemies above. Controls to decide: drag, or left and right halves | Planned | |
+| 012 | `duck-runner` | Duck Runner | Tap, swipe down | Side-scrolling runner with a duck: jump over foxes, cattails and fallen logs; duck under low hawks and hanging branches; decoy ducks and snapping turtles for variety | Planned | |
+| 013 | `stack-tower` | Stack Tower | Tap | Stacker: tap to drop each sliding block on the tower; overhangs get cut off | Planned | |
+| 014 | `echo-pads` | Echo Pads | Tap | Memory pattern: Simon-style coloured pads light up in a growing sequence; tap it back | Planned | |
+| 015 | `pop-shot` | Pop Shot | Drag | Bubble shooter: aim, shoot, and match three or more colours to pop them | Planned | |
+| 016 | `cave-glide` | Cave Glide | Hold | Cave flyer: hold to rise, let go to fall, through a narrowing cave | Planned | |
+| 017 | `rain-dodge` | Rain Dodge | Drag | Dodge field: drag around falling hazards, grab pickups | Planned | |
+| 018 | `ring-stop` | Ring Stop | Tap | Timing ring: tap when the spinning marker crosses the target | Planned | |
+| 019 | `slice-storm` | Slice Storm | Swipe | Slicer: swipe through flying things, not the red ones | Planned | |
+
+Planned games are in the owner's order (006 to 015), then older ideas (016 on). The "-style" notes name the genre only: each game still gets its own original name, characters and look. New ideas go at the bottom as *Planned*, with the next free number.
 
 ## Maybe later
 - A daily challenge game with its own leaderboard on the phone.
