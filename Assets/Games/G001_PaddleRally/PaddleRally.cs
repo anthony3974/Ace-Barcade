@@ -27,9 +27,9 @@ namespace AceBarcade.Games.PaddleRally
 
             BuildCourt();
 
-            _paddle = MakeSprite("Paddle", GameSprite("paddle"), new Vector2(0f, RallySim.PaddleY), 10).transform;
-            _ball = MakeSprite("Ball", GameSprite("ball"), _sim.Ball, 20).transform;
-            _gem = MakeSprite("Gem", GameSprite("gem"), Vector2.zero, 5).transform;
+            _paddle = MakeSprite("Paddle", PropSprite("paddle"), new Vector2(0f, RallySim.PaddleY), 10).transform;
+            _ball = MakeSprite("Ball", PropSprite("ball"), _sim.Ball, 20).transform;
+            _gem = MakeSprite("Gem", PropSprite("gem"), Vector2.zero, 5).transform;
             _gem.gameObject.SetActive(false);
         }
 
@@ -55,7 +55,7 @@ namespace AceBarcade.Games.PaddleRally
             // The spikes along the bottom (danger is Red), with Ink below them down past the screen.
             const float spikesHeight = 120f / Style.PixelsPerUnit;
             float spikesY = RallySim.LoseY - 0.25f - spikesHeight / 2f + 0.12f;
-            MakeSprite("Spikes", GameSprite("spikes"), new Vector2(0f, spikesY), 8);
+            MakeSprite("Spikes", PropSprite("spikes"), new Vector2(0f, spikesY), 8);
             Shapes.Make(t, Shapes.Square, Palette.RedDark, new Vector2(0f, spikesY - spikesHeight / 2f - 2.5f), new Vector2(12f, 5.2f), 8, "Pit");
         }
 

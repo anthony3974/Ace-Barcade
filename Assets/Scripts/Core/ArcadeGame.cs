@@ -63,6 +63,12 @@ namespace AceBarcade
         /// <summary>A sprite from this game's art folder (Art/Games/G001_Name/paddle.svg is "paddle").</summary>
         protected Sprite GameSprite(string name) => Sprites.Get($"Games/{Info.Folder}/{name}");
 
+        /// <summary>
+        /// A prop every game can use, from Art/Shared/Props (paddle, ball, gem, spikes...).
+        /// Games that share a thing share its art, so a paddle looks the same everywhere.
+        /// </summary>
+        protected Sprite PropSprite(string name) => Sprites.Get($"Shared/Props/{name}");
+
         /// <summary>A new child object of the game, so it is cleaned up with the game.</summary>
         protected GameObject Make(string name, Vector2 position = default)
         {
