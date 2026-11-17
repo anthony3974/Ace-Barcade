@@ -34,7 +34,7 @@ Each task is small enough for one session and ends with a check. Tick it off whe
 
 Unity locks the project while the editor is open, so change Project Settings through `Assets/Editor/ProjectSetup.cs` (**Tools > Ace Barcade > Apply Project Settings**) rather than the settings window or the files on disk.
 
-**Status (2026-11-17):** Game 001, **Paddle Rally**, is built and plays end to end with the shared HUD (score, best, pause, tap to start, pause screen, game-over card), the arcade font, the shared feel (squash, pop, shake, bursts) and the first Android build (`Builds/AceBarcade.apk`, made by **Tools > Ace Barcade > Build APK**). 21 edit mode and 2 play mode tests pass. It's waiting on the owner's phone playtest (tasks 3 and 6). The hub (main menu) is built too: the app opens on it. Sound is still to come. Game 002, **Drop Stack**, is built on the `tetris` branch (task 7).
+**Status (2026-11-17):** Game 001, **Paddle Rally**, is built and plays end to end with the shared HUD (score, best, pause, tap to start, pause screen, game-over card), the arcade font, the shared feel (squash, pop, shake, bursts) and the first Android build (`Builds/AceBarcade.apk`, made by **Tools > Ace Barcade > Build APK**). 21 edit mode and 2 play mode tests pass. It's waiting on the owner's phone playtest (tasks 3 and 6). The hub (main menu) is built too: the app opens on it. Sound is still to come. Game 002, **Drop Stack**, is built on the `tetris` branch (task 7). Game 004, **Rocket Lanes**, is built on the `runner` branch (task 9).
 
 ### Setup
 - [x] **1. Project and repo.** Universal 2D project, identity `Tony3974`, product `Ace Barcade`, id `com.Tony3974.AceBarcade`. Android, portrait, IL2CPP ARM64, min API 24, no HDR or MSAA. Assemblies: `AceBarcade` (shared), `AceBarcade.Games`, `AceBarcade.Editor`, `AceBarcade.Tests`, `AceBarcade.PlayTests`. The core: `ArcadeGame`, `GameRegistry`, `ArcadeInput` (tap, hold, drag, swipe, Back), `ArcadeCamera` (fixed 9 x 16 view), `Scores`, `Sprites`, `Palette`, `Style`. *Check: edit mode tests pass, and the repo is on GitHub.*
@@ -76,11 +76,21 @@ Pick each next game with the owner. Each game is one task: art, code, icon, test
   - A full row flashes and clears, with a small shake (a big one for 3 or more rows). A gem in a cleared row bursts teal and adds 25.
   - Stacking up to the red line ends the game with the usual game-over card.
   - It gets noticeably faster after 8 rows.
+- [ ] **9. Game 004: Rocket Lanes** (on the `runner` branch). A top-down lane runner: a yellow rocket flies up three lanes while rows of red mines scroll down at it, and a swipe left or right moves it one lane. Every row leaves a lane open; each row passed scores 1, and teal crystals in open lanes score 5. The scroll speeds up a little with every row, up to a cap. **Fair by time:** if a row makes you move, the gap before it leaves at least reaction plus swipe time (0.5 s) after the last row is clear, and never asks for more than one lane; rows closer than that keep every open lane open. The gap shrinks and the speed rises only as far as that still holds at full speed. Rules and the fairness constants in `RocketLanesSim` (11 edit mode tests, including a bot with human reaction times that survives past top speed); 2 play mode tests swipe, dodge, pick up crystals, crash and retry. Built; waiting on the owner's phone playtest. *Check, on the phone:*
+  - Rocket Lanes' card is in the hub with the rocket icon; tapping it shows the title and TAP TO START, the rocket in the middle lane with its flame flickering.
+  - The touch that starts the run doesn't change lanes.
+  - **Swipe** left or right moves one lane, as soon as your finger has moved a little (not when you lift it). The rocket slides over and leans into the move, with a little squash.
+  - One swipe is one lane, even if you keep dragging. Quick back-to-back swipes each count. The edges stop it.
+  - Mines pop in at the top in rows of one or two; there's always a way through. Sometimes two rows come close together: staying in an open lane gets you through both.
+  - Flying through a crystal scores 5 with a teal burst.
+  - Hitting a mine gives a red burst and a big shake, then the game-over card.
+  - It speeds up as you go, and late in a run (about 50 rows in, top speed) it's hard but still winnable.
+  - Stars drift slower than the lane dashes, so space has depth. Nothing important hides under the score.
 
 ## Game ideas
 A pool to pick from, one thumb, portrait. Working titles only; every game gets its own original name and look.
 - ~~**Paddle and ball:**~~ done as Paddle Rally (Game 001).
-- **Lane runner:** a top-down run, swiping between three lanes to dodge and collect (swipe).
+- ~~**Lane runner:**~~ done as Rocket Lanes (Game 004).
 - **Brick breaker:** clear a wall of bricks with a bouncing ball (drag).
 - **Snake:** grow a snake by eating, without hitting yourself (swipe).
 - **Stacker:** drop sliding blocks on a tower and keep it straight (tap).

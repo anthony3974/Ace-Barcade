@@ -16,6 +16,7 @@ On the phone everything is one thumb: tap, hold, drag or swipe, depending on the
 |---|---|---|---|
 | 001 | Paddle Rally | Drag | Slide the paddle to keep the ball out of the spikes. Hit the gem for bonus points. |
 | 002 | Drop Stack | Tap, drag, flick | Fill rows of falling blocks to clear them. Tap to turn, drag to slide, flick down to drop. Clear gem blocks for bonus points. |
+| 004 | Rocket Lanes | Swipe | Swipe left or right to change lanes and dodge the rows of mines. Fly through crystals for bonus points. |
 
 In the editor, the mouse stands in for the finger and Escape for Back. Use **Tools > Ace Barcade > Play Game...** to start in a game.
 
