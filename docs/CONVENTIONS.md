@@ -8,8 +8,10 @@ How the arcade is put together, and how a game plugs into it. The look is in [ST
 - A game is a C# class that extends `ArcadeGame` and carries an `[ArcadeGame(...)]` attribute. `GameRegistry` finds every such class by itself: there is no list of games to edit.
 - A game builds its whole world **in code**, in `Build()`, as children of its own object. Leaving or retrying a game destroys that object and builds a fresh one, so a game never resets itself.
 - `Arcade` (static) is where code finds the running pieces: `Arcade.Input`, `Arcade.Camera`, `Arcade.Current`. `Arcade.Launch`, `Arcade.Retry` and `Arcade.ShowHub` move between games.
+- `ArcadeRoot` also makes the shared `Hud` and the EventSystem. The HUD reads the current game's state and score every frame; games never talk to it.
 - **The arcade owns the flow, the same for every game:** Ready ("tap to start") → Playing → Paused → Over (score card). A game only builds, plays, adds score and calls `EndRun()`.
 - To play a game in the editor: **Tools > Ace Barcade > Play Game...**
+- **Paddle Rally (`Assets/Games/G001_PaddleRally/`) is the reference game.** When in doubt, copy what it does: rules in a plain C# class (`RallySim`) with edit mode tests, a thin `ArcadeGame` that draws the rules and adds the feel, and a play mode test that plays it.
 
 ## Writing a game
 
@@ -41,7 +43,7 @@ namespace AceBarcade.Games.PaddleRally
 
 - `Play(dt)` is only called while playing. Pausing also sets `Time.timeScale` to 0, so helper components that use `Time.deltaTime` stop too.
 - Input is one finger: `Input.Pressed`, `Down`, `Up`, `Tapped`, `Swipe`, `Position`, `DragDelta`, `HeldFor`. Positions are in world units. Never read the Input System directly in a game.
-- Colors come from `Palette`, sizes from `Style`.
+- Colors come from `Palette`, sizes from `Style`. Feel comes from `Juice` (`Squash`, `Pop`, `ShakeSmall`, `ShakeBig`, `Burst`), plain shapes and outlined walls from `Shapes`.
 - Put rules and maths that can be tested (scoring, spawning, collisions on paper) in plain C# classes, and test them in edit mode.
 
 ## Numbers, ids and names
@@ -64,10 +66,16 @@ Art/
 Assets/
   Scenes/Arcade.unity        the only scene
   Resources/Sprites/         generated PNGs (a mirror of Art/); don't edit by hand
+  Resources/Fonts/           generated: the Lilita One TextMeshPro font (FontSetup.cs)
+  Fonts/                     Lilita One .ttf and its licence
+  TextMesh Pro/              TextMeshPro's own shaders and settings (from its package)
   Scripts/                   AceBarcade assembly: the shared kit
     Core/                    Arcade, ArcadeRoot, ArcadeGame, GameRegistry, ArcadeInput,
-                             GestureTracker, ArcadeCamera, Palette, Style, Scores, Sprites
+                             GestureTracker, ArcadeCamera, Palette, Style, Scores, Sprites,
+                             Shapes, Juice
+    UI/                      Hud (the shared HUD), UiKit (text, buttons, safe area)
     Tests/                   edit mode tests (AceBarcade.Tests)
+    Tests/PlayMode/          play mode tests (AceBarcade.PlayTests), one file per game
   Games/                     AceBarcade.Games assembly: every game
     G001_Name/               one game's code
   Editor/                    AceBarcade.Editor: Tools > Ace Barcade menu, import settings, setup
@@ -81,12 +89,22 @@ docs/                        STYLE.md and this file
 1. Pick the next free number and an id. Add the game to the list in `PLAN.md`.
 2. Draw its art in `Art/Games/G###_Name/`, starting with `icon.svg`. Run **Tools > Ace Barcade > Build Sprites** (or `Art/build-sprites.sh`), which checks the style first.
 3. Write the game in `Assets/Games/G###_Name/<Name>.cs`, as above.
-4. Run the tests and `Tools/compile-check.sh`, then play it on the phone.
-5. Go through the new game checklist at the end of [STYLE.md](STYLE.md).
+4. Add `Assets/Scripts/Tests/RallySimTests.cs`-style edit mode tests for its rules and a play mode test that plays it (see `PaddleRallyPlayTests.cs`).
+5. Run the tests and `Tools/compile-check.sh`, look at the screenshots (below), then build the APK and play it on the phone.
+6. Go through the new game checklist at the end of [STYLE.md](STYLE.md).
 
 ## Project settings
 
 Unity locks its settings files while the editor is open, so settings are changed in code: `Assets/Editor/ProjectSetup.cs`, run from **Tools > Ace Barcade > Apply Project Settings** (or in batch mode, see the file). It sets the identity, Android, portrait, IL2CPP ARM64, the render settings and the scene. Change it there, not in the Project Settings window, so the setup can always be run again.
+
+## Tests, screenshots and builds
+
+- Edit mode tests: rules and maths. Play mode tests: the real arcade, driven with `Arcade.Input.Simulate(pressed, worldPosition)`.
+- With the environment variable `ACE_CAPTURE_DIR` set, play mode tests save 1080 x 1920 screenshots there, so the look can be checked without a phone. From the command line (the editor closed):
+  ```
+  ACE_CAPTURE_DIR=/tmp/shots Unity -batchmode -force-vulkan -projectPath . -runTests -testPlatform PlayMode -testResults /tmp/play.xml
+  ```
+- **Tools > Ace Barcade > Build APK** makes `Builds/AceBarcade.apk` (not in git). From the command line: `Unity -batchmode -nographics -projectPath . -executeMethod AceBarcade.EditorTools.ArcadeMenu.BuildApk`.
 
 ## When there are many games
 

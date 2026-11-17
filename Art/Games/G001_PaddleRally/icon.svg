@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="360" viewBox="0 0 360 360">
+  <defs><clipPath id="card"><rect x="8" y="8" width="344" height="344" rx="56"/></clipPath></defs>
+  <rect x="8" y="8" width="344" height="344" rx="56" fill="#3B3355"/>
+  <circle cx="70" cy="90" r="70" fill="#5C5A78" clip-path="url(#card)"/>
+  <circle cx="300" cy="230" r="46" fill="#5C5A78" clip-path="url(#card)"/>
+  <rect x="0" y="296" width="360" height="64" fill="#E5484D" clip-path="url(#card)"/>
+  <circle cx="200" cy="140" r="48" fill="#E4E6F0"/>
+  <circle cx="193" cy="133" r="39" fill="#FFF8EC"/>
+  <circle cx="200" cy="140" r="48" fill="none" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+  <defs><clipPath id="paddle"><rect x="60" y="220" width="240" height="56" rx="28"/></clipPath></defs>
+  <rect x="60" y="220" width="240" height="56" rx="28" fill="#FFD23F"/>
+  <rect x="40" y="256" width="280" height="30" fill="#D9A21B" clip-path="url(#paddle)"/>
+  <rect x="90" y="230" width="64" height="16" rx="8" fill="#FFF8EC"/>
+  <rect x="60" y="220" width="240" height="56" rx="28" fill="none" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+  <line x1="8" y1="296" x2="352" y2="296" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+  <rect x="8" y="8" width="344" height="344" rx="56" fill="none" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+</svg>

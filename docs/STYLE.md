@@ -54,23 +54,26 @@ Flat, chunky cartoon: big simple shapes, one thick dark outline, colors from one
 
 ## Text and UI
 
-- One font for the whole arcade, chosen in PLAN task 3. Games never pick a font or draw their own buttons.
-- The shared HUD draws the score, best score, pause button, "Tap to start", the pause screen and the game-over card the same way in every game. A game only reports its score.
+- **One font: Lilita One**, a chunky rounded display face, always with the Ink outline (it's baked into the font's material, so there's no way to forget it). Games never pick a font or draw their own buttons.
+- Text is Paper on dark backgrounds and Ink or Slate on light cards. Yellow and Pink are for the moments that matter (TAP TO START, the final score, NEW BEST!).
+- Two button kinds only: **primary** (Green: the thing you most likely want, like RETRY or RESUME) and **secondary** (Cloud: everything else). Labels are short and in capitals.
+- The shared HUD (`Hud.cs`) draws the score, best score, pause button, "Tap to start", the pause screen and the game-over card the same way in every game. A game only reports its score.
 - No text inside art. **(checked)**
 
 ## Motion and effects
 
 - 60 fps. Movement is snappy with eased starts and stops; nothing floaty.
-- Shared feel, from the shared kit: squash and stretch on landings and hits (`Style.Squash`), pops when things appear (`Style.PopTime`), screen shake in two strengths only (`Style.ShakeSmall`, `Style.ShakeBig`), and flat particle bursts in palette colors.
+- Shared feel, from `Juice`: `Squash` on landings and hits, `Pop` when things appear, `ShakeSmall` and `ShakeBig` (the only two shake strengths), and `Burst` for flat palette-colored dots. A burst takes the color of what made it, but never the same color as the thing it bursts from (Paddle Rally's yellow paddle throws orange sparks).
+- Plain shapes that need no outline (background decoration, particles, dimming) come from `Shapes`, in palette colors. Walls and platforms drawn in code use `Shapes.Box`, which adds the Ink outline and the shade side.
 - No motion blur, trails made of transparency, or post-processing.
 
 ## Sound
 
-One shared sound set (task 5), in one style. A game that needs a new sound adds it to the shared set, made the same way, so other games can use it too.
+One shared sound set (PLAN task 5), in one style. A game that needs a new sound adds it to the shared set, made the same way, so other games can use it too.
 
 ## Game icons
 
-Every game has `Art/Games/G###_Name/icon.svg`, **exactly 360 x 360 px** **(checked)**, built from the icon template (task 4): a rounded square in one palette color with the game's main object large in the middle, outlined like everything else. No text on icons; the hub prints the title.
+Every game has `Art/Games/G###_Name/icon.svg`, **exactly 360 x 360 px** **(checked)**: a rounded square (radius 56 px, Ink outline) showing the game's own background, with its main objects large in the middle, outlined like everything else. `Art/Games/G001_PaddleRally/icon.svg` is the template. No text on icons; the hub prints the title.
 
 ## New game checklist
 

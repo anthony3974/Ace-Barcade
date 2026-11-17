@@ -6,13 +6,19 @@ It's a personal project and won't be published to a store.
 
 ## Current state
 
-The project is set up and has no games yet. The shared core is in place: the game base class, automatic game discovery, one-finger input, the fixed portrait camera, best scores, sprite loading, the palette and the style numbers. So is the art pipeline with its style check. See [PLAN.md](PLAN.md) for what's next, [docs/STYLE.md](docs/STYLE.md) for the house style every game follows, and [docs/CONVENTIONS.md](docs/CONVENTIONS.md) for how the code is organised and how to add a game.
+One game so far: **Paddle Rally** (drag to keep a ball out of the spikes), waiting on its first playtest on a phone. Around it is the shared kit every game uses: the HUD (score, best, pause, game-over card), the font, one-finger input, the portrait camera, best scores, game feel (squash, pop, shake, bursts) and the art pipeline with its style check. The hub screen and sound are next. See [PLAN.md](PLAN.md) for what's next, [docs/STYLE.md](docs/STYLE.md) for the house style every game follows, and [docs/CONVENTIONS.md](docs/CONVENTIONS.md) for how the code is organised and how to add a game.
 
 ## Playing
 
 On the phone everything is one thumb: tap, hold, drag or swipe, depending on the game. Android's Back button pauses a game.
 
+| # | Game | Controls | How to play |
+|---|---|---|---|
+| 001 | Paddle Rally | Drag | Slide the paddle to keep the ball out of the spikes. Hit the gem for bonus points. |
+
 In the editor, the mouse stands in for the finger and Escape for Back. Use **Tools > Ace Barcade > Play Game...** to start in a game.
+
+To put it on a phone, use **Tools > Ace Barcade > Build APK**, then copy `Builds/AceBarcade.apk` to the phone and open it.
 
 ## Getting started
 
@@ -22,7 +28,7 @@ In the editor, the mouse stands in for the finger and Escape for Back. Use **Too
 
 On Linux with Intel graphics, launch the editor with `-force-vulkan`: OpenGL can draw red noise.
 
-To run the tests, open **Window > General > Test Runner**, choose **EditMode** and click **Run All**.
+To run the tests, open **Window > General > Test Runner**, choose **EditMode** or **PlayMode** and click **Run All**. The play mode tests play each game through the real arcade, and can save phone-sized screenshots (see [docs/CONVENTIONS.md](docs/CONVENTIONS.md#tests-screenshots-and-builds)).
 
 To check that the code compiles without opening Unity (after Unity has opened the project once), run `Tools/compile-check.sh`.
 
@@ -31,6 +37,10 @@ To check that the code compiles without opening Unity (after Unity has opened th
 All art is hand-built SVG in `Art/`, authored at 120 px per unit, and converted to PNG sprites in `Assets/Resources/Sprites/` by `Art/build-sprites.sh` (or **Tools > Ace Barcade > Build Sprites**). It needs `rsvg-convert` (from librsvg) and `python3`.
 
 Before converting, `Art/check-style.sh` checks every SVG against the house style: palette colors only, no gradients or transparency, 8 px or 5 px outlines with round joins, and a 360 x 360 icon for each game. Art that breaks a rule doesn't get built.
+
+## Credits
+
+Font: [Lilita One](https://fonts.google.com/specimen/Lilita+One) by Juan Montoreano, under the SIL Open Font License (`Assets/Fonts/LilitaOne-OFL.txt`).
 
 ## Adding a game
 
