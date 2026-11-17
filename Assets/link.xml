@@ -1,0 +1,4 @@
+<!-- Games are found by reflection, so tell the IL2CPP stripper to keep all of them. -->
+<linker>
+    <assembly fullname="AceBarcade.Games" preserve="all"/>
+</linker>

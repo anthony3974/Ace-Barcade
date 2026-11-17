@@ -1,0 +1,30 @@
+# Ace Barcade palette. Every color in every game comes from this list.
+# One name and one hex per line. Each hue has a base and a darker shade for the flat shadow side.
+# Art/check-style.sh and the PaletteTests read this file; Palette.cs must match it.
+Ink         #2A2238
+Night       #3B3355
+Slate       #5C5A78
+Mist        #A7A9C4
+Cloud       #E4E6F0
+Paper       #FFF8EC
+Red         #E5484D
+RedDark     #B5303A
+Orange      #F28C38
+OrangeDark  #C4661F
+Yellow      #FFD23F
+YellowDark  #D9A21B
+Lime        #9BD84E
+Green       #3FAE5A
+GreenDark   #2A7F45
+Teal        #2EC4B6
+TealDark    #1E8F86
+Sky         #5BC0EB
+Blue        #3A7BD5
+BlueDark    #2A559C
+Purple      #8E5BD6
+PurpleDark  #6339A6
+Pink        #F37EB5
+PinkDark    #C9558D
+Tan         #F2C69B
+Brown       #A0663F
+BrownDark   #6E4426

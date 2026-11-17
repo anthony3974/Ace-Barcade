@@ -1,0 +1,21 @@
+{
+    "name": "AceBarcade.Editor",
+    "rootNamespace": "AceBarcade.EditorTools",
+    "references": [
+        "AceBarcade",
+        "AceBarcade.Games",
+        "Unity.RenderPipelines.Core.Runtime",
+        "Unity.RenderPipelines.Universal.Runtime"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
