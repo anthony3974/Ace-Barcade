@@ -60,7 +60,9 @@ Art/
   palette.txt                the palette (Palette.cs must match it; a test checks)
   build-sprites.sh           SVG -> PNG for every SVG under Art/
   check-style.sh             the house style check (check_style.py does the work)
-  Shared/                    art every game can use: HUD icons, particles, props
+  Shared/UI/                 the HUD's and hub's art (buttons, cards, tiles)
+  Shared/Props/              things more than one game uses (paddle, ball, gem, spikes):
+                             load them with PropSprite("paddle") so they look the same everywhere
   Games/G001_Name/           one game's art, including icon.svg (360 x 360)
   _anything/                 scratch: skipped by both scripts
 Assets/

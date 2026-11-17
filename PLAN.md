@@ -34,7 +34,7 @@ Each task is small enough for one session and ends with a check. Tick it off whe
 
 Unity locks the project while the editor is open, so change Project Settings through `Assets/Editor/ProjectSetup.cs` (**Tools > Ace Barcade > Apply Project Settings**) rather than the settings window or the files on disk.
 
-**Status (2026-11-17):** Game 001, **Paddle Rally**, is built and plays end to end with the shared HUD (score, best, pause, tap to start, pause screen, game-over card), the arcade font, the shared feel (squash, pop, shake, bursts) and the first Android build (`Builds/AceBarcade.apk`, made by **Tools > Ace Barcade > Build APK**). 21 edit mode and 2 play mode tests pass. It's waiting on the owner's phone playtest (tasks 3 and 6). The hub (main menu) is built too: the app opens on it. Sound is still to come. Game 002, **Drop Stack**, is built on the `tetris` branch (task 7). Game 004, **Rocket Lanes**, is built on the `runner` branch (task 9).
+**Status (2026-11-17):** Game 001, **Paddle Rally**, is built and plays end to end with the shared HUD (score, best, pause, tap to start, pause screen, game-over card), the arcade font, the shared feel (squash, pop, shake, bursts) and the first Android build (`Builds/AceBarcade.apk`, made by **Tools > Ace Barcade > Build APK**). 21 edit mode and 2 play mode tests pass. It's waiting on the owner's phone playtest (tasks 3 and 6). The hub (main menu) is built too: the app opens on it. Sound is still to come. Game 002, **Drop Stack**, is merged (task 7). Game 003, **Brick Burst**, is merged (task 8). Game 004, **Rocket Lanes**, is merged (task 9).
 
 ### Setup
 - [x] **1. Project and repo.** Universal 2D project, identity `Tony3974`, product `Ace Barcade`, id `com.Tony3974.AceBarcade`. Android, portrait, IL2CPP ARM64, min API 24, no HDR or MSAA. Assemblies: `AceBarcade` (shared), `AceBarcade.Games`, `AceBarcade.Editor`, `AceBarcade.Tests`, `AceBarcade.PlayTests`. The core: `ArcadeGame`, `GameRegistry`, `ArcadeInput` (tap, hold, drag, swipe, Back), `ArcadeCamera` (fixed 9 x 16 view), `Scores`, `Sprites`, `Palette`, `Style`. *Check: edit mode tests pass, and the repo is on GitHub.*
@@ -76,6 +76,14 @@ Pick each next game with the owner. Each game is one task: art, code, icon, test
   - A full row flashes and clears, with a small shake (a big one for 3 or more rows). A gem in a cleared row bursts teal and adds 25.
   - Stacking up to the red line ends the game with the usual game-over card.
   - It gets noticeably faster after 8 rows.
+- [ ] **8. Game 003: Brick Burst** (on the `brick-breaker` branch). Drag the paddle to knock the ball into a wall of bricks. Our own take on the genre: the house style, Paddle Rally's court and paddle, tough grey bricks that crack on the first hit and break on the second, teal gem bricks worth 5, and an endless run of walls, each a row taller and a little faster, with tough bricks from the second wall and gaps from the third. Three lives. Bricks score 1, tough bricks 2, gems 5, and a cleared wall 10. The paddle, ball, gem and spikes are now shared props (`Art/Shared/Props`), used by both paddle games. Rules in `BrickSim` (11 edit mode tests); a play mode test breaks bricks, loses three balls and ends. Built; waiting on the owner's phone playtest. *Check, on the phone:*
+  - Brick Burst's card is in the hub; its start screen shows the wall of 5 rows, with the title below it.
+  - The paddle and ball feel exactly like Paddle Rally's.
+  - Bricks break with a burst in their colour. A grey brick shows a crack on the first hit (with a little shake) and breaks on the second.
+  - A teal gem brick bursts teal and is worth 5.
+  - Missing the ball costs one of the three small balls under the best score; the ball waits on the paddle for a second, then goes.
+  - Clearing a wall brings a taller, faster one, popping in, with a big shake.
+  - Losing the third ball ends the game with the usual card.
 - [ ] **9. Game 004: Rocket Lanes** (on the `runner` branch). A top-down lane runner: a yellow rocket flies up three lanes while rows of red mines scroll down at it, and a swipe left or right moves it one lane. Every row leaves a lane open; each row passed scores 1, and teal crystals in open lanes score 5. The scroll speeds up a little with every row, up to a cap. **Fair by time:** if a row makes you move, the gap before it leaves at least reaction plus swipe time (0.5 s) after the last row is clear, and never asks for more than one lane; rows closer than that keep every open lane open. The gap shrinks and the speed rises only as far as that still holds at full speed. Rules and the fairness constants in `RocketLanesSim` (11 edit mode tests, including a bot with human reaction times that survives past top speed); 2 play mode tests swipe, dodge, pick up crystals, crash and retry. Built; waiting on the owner's phone playtest. *Check, on the phone:*
   - Rocket Lanes' card is in the hub with the rocket icon; tapping it shows the title and TAP TO START, the rocket in the middle lane with its flame flickering.
   - The touch that starts the run doesn't change lanes.
@@ -91,7 +99,7 @@ Pick each next game with the owner. Each game is one task: art, code, icon, test
 A pool to pick from, one thumb, portrait. Working titles only; every game gets its own original name and look.
 - ~~**Paddle and ball:**~~ done as Paddle Rally (Game 001).
 - ~~**Lane runner:**~~ done as Rocket Lanes (Game 004).
-- **Brick breaker:** clear a wall of bricks with a bouncing ball (drag).
+- ~~**Brick breaker:**~~ done as Brick Burst (Game 003).
 - **Snake:** grow a snake by eating, without hitting yourself (swipe).
 - **Stacker:** drop sliding blocks on a tower and keep it straight (tap).
 - ~~**Falling blocks:**~~ done as Drop Stack (Game 002).

@@ -63,7 +63,8 @@ namespace AceBarcade
 
         void BuildReady(RectTransform safe)
         {
-            var ready = UiKit.Rect(safe, "Ready").At(new Vector2(0.5f, 0.5f), new Vector2(0, 260), new Vector2(UiKit.ReferenceWidth, 520));
+            // Centred on the screen: below the top quarter, where games keep things like a brick wall.
+            var ready = UiKit.Rect(safe, "Ready").At(new Vector2(0.5f, 0.5f), new Vector2(0, 0), new Vector2(UiKit.ReferenceWidth, 520));
             _ready = ready.gameObject;
             _title = UiKit.MakeText(ready, "Title", "", 124, Palette.Paper);
             _title.rectTransform.At(new Vector2(0.5f, 1f), Vector2.zero, new Vector2(1000, 160));
