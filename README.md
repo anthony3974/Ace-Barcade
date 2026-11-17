@@ -6,7 +6,7 @@ It's a personal project and won't be published to a store.
 
 ## Current state
 
-The app opens on the hub: a scrolling grid of game cards, two across and six down, each with the game's thumbnail, title and best score. One game so far: **Paddle Rally** (drag to keep a ball out of the spikes), waiting on its first playtest on a phone. Around it is the shared kit every game uses: the HUD (score, best, pause, game-over card), the font, one-finger input, the portrait camera, best scores, game feel (squash, pop, shake, bursts) and the art pipeline with its style check. Sound is next. See [PLAN.md](PLAN.md) for what's next, [docs/STYLE.md](docs/STYLE.md) for the house style every game follows, and [docs/CONVENTIONS.md](docs/CONVENTIONS.md) for how the code is organised and how to add a game.
+The app opens on the hub: a scrolling grid of game cards, two across and six down, each with the game's thumbnail, title and best score. Two games so far, both waiting on their first playtest on a phone: **Paddle Rally** (drag to keep a ball out of the spikes) and **Drop Stack** (a falling-block puzzle). Around it is the shared kit every game uses: the HUD (score, best, pause, game-over card), the font, one-finger input, the portrait camera, best scores, game feel (squash, pop, shake, bursts) and the art pipeline with its style check. Sound is next. See [PLAN.md](PLAN.md) for what's next, [docs/STYLE.md](docs/STYLE.md) for the house style every game follows, and [docs/CONVENTIONS.md](docs/CONVENTIONS.md) for how the code is organised and how to add a game.
 
 ## Playing
 
@@ -15,6 +15,7 @@ On the phone everything is one thumb: tap, hold, drag or swipe, depending on the
 | # | Game | Controls | How to play |
 |---|---|---|---|
 | 001 | Paddle Rally | Drag | Slide the paddle to keep the ball out of the spikes. Hit the gem for bonus points. |
+| 002 | Drop Stack | Tap, drag, flick | Fill rows of falling blocks to clear them. Tap to turn, drag to slide, flick down to drop. Clear gem blocks for bonus points. |
 
 In the editor, the mouse stands in for the finger and Escape for Back. Use **Tools > Ace Barcade > Play Game...** to start in a game.
 

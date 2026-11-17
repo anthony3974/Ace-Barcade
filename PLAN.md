@@ -34,7 +34,7 @@ Each task is small enough for one session and ends with a check. Tick it off whe
 
 Unity locks the project while the editor is open, so change Project Settings through `Assets/Editor/ProjectSetup.cs` (**Tools > Ace Barcade > Apply Project Settings**) rather than the settings window or the files on disk.
 
-**Status (2026-11-17):** Game 001, **Paddle Rally**, is built and plays end to end with the shared HUD (score, best, pause, tap to start, pause screen, game-over card), the arcade font, the shared feel (squash, pop, shake, bursts) and the first Android build (`Builds/AceBarcade.apk`, made by **Tools > Ace Barcade > Build APK**). 21 edit mode and 2 play mode tests pass. It's waiting on the owner's phone playtest (tasks 3 and 6). The hub (main menu) is built too: the app opens on it. Sound is still to come.
+**Status (2026-11-17):** Game 001, **Paddle Rally**, is built and plays end to end with the shared HUD (score, best, pause, tap to start, pause screen, game-over card), the arcade font, the shared feel (squash, pop, shake, bursts) and the first Android build (`Builds/AceBarcade.apk`, made by **Tools > Ace Barcade > Build APK**). 21 edit mode and 2 play mode tests pass. It's waiting on the owner's phone playtest (tasks 3 and 6). The hub (main menu) is built too: the app opens on it. Sound is still to come. Game 002, **Drop Stack**, is built on the `tetris` branch (task 7).
 
 ### Setup
 - [x] **1. Project and repo.** Universal 2D project, identity `Tony3974`, product `Ace Barcade`, id `com.Tony3974.AceBarcade`. Android, portrait, IL2CPP ARM64, min API 24, no HDR or MSAA. Assemblies: `AceBarcade` (shared), `AceBarcade.Games`, `AceBarcade.Editor`, `AceBarcade.Tests`, `AceBarcade.PlayTests`. The core: `ArcadeGame`, `GameRegistry`, `ArcadeInput` (tap, hold, drag, swipe, Back), `ArcadeCamera` (fixed 9 x 16 view), `Scores`, `Sprites`, `Palette`, `Style`. *Check: edit mode tests pass, and the repo is on GitHub.*
@@ -67,7 +67,15 @@ The shared HUD (score, best, pause, tap to start, pause screen, game-over card, 
 
 ### Games
 Pick each next game with the owner. Each game is one task: art, code, icon, tests for its rules, a play mode test, and the new game checklist in `docs/STYLE.md`. *Check for every game: it plays well on the phone and looks at home next to the others.*
-- [ ] **7. Game 002.** Chosen with the owner from the ideas below.
+- [ ] **7. Game 002: Drop Stack** (on the `tetris` branch). A falling-block puzzle: pieces fall into an 8 x 14 well, and a full row clears. Our own take on the genre: its own name and house-style look, a smaller well, our own set of six pieces mixing 3-block and 4-block shapes, and teal gem blocks worth 25 when their row clears. Clearing 1, 2, 3 or 4 rows at once scores 10, 30, 60 or 100 (times the level); every 8 rows is a level, and pieces fall faster. Rules in `DropSim` (12 edit mode tests); 2 play mode tests play it with simulated touches. Built; waiting on the owner's phone playtest. *Check, on the phone:*
+  - Drop Stack's card is in the hub next to Paddle Rally; tapping it shows the title and TAP TO START, with the next piece shown small above the well.
+  - **Tap** turns the piece (the tap that starts the game doesn't). Next to a wall it slides out to turn.
+  - **Drag** sideways slides it one column per block-width your finger moves, and it stops at the walls.
+  - **Drag down** drops it faster; a quick **flick down** drops it all the way.
+  - The grey shadow shows where it will land. A resting piece can still be slid for a moment before it locks.
+  - A full row flashes and clears, with a small shake (a big one for 3 or more rows). A gem in a cleared row bursts teal and adds 25.
+  - Stacking up to the red line ends the game with the usual game-over card.
+  - It gets noticeably faster after 8 rows.
 
 ## Game ideas
 A pool to pick from, one thumb, portrait. Working titles only; every game gets its own original name and look.
@@ -76,6 +84,7 @@ A pool to pick from, one thumb, portrait. Working titles only; every game gets i
 - **Brick breaker:** clear a wall of bricks with a bouncing ball (drag).
 - **Snake:** grow a snake by eating, without hitting yourself (swipe).
 - **Stacker:** drop sliding blocks on a tower and keep it straight (tap).
+- ~~**Falling blocks:**~~ done as Drop Stack (Game 002).
 - **Cave flyer:** hold to rise, let go to fall, through a narrowing cave (hold).
 - **Bouncer:** a ball that bounces on its own; steer it from platform to platform upward (drag).
 - **Whack:** tap things as they pop up, but not the Red ones (tap).
