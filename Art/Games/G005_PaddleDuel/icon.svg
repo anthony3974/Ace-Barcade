@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="360" viewBox="0 0 360 360">
+  <defs><clipPath id="card"><rect x="8" y="8" width="344" height="344" rx="56"/></clipPath></defs>
+  <rect x="8" y="8" width="344" height="344" rx="56" fill="#3B3355"/>
+  <circle cx="300" cy="150" r="58" fill="#5C5A78" clip-path="url(#card)"/>
+  <circle cx="54" cy="236" r="40" fill="#5C5A78" clip-path="url(#card)"/>
+  <rect x="0" y="0" width="360" height="56" fill="#3FAE5A" clip-path="url(#card)"/>
+  <rect x="0" y="304" width="360" height="56" fill="#E5484D" clip-path="url(#card)"/>
+  <defs><clipPath id="cpu"><rect x="110" y="76" width="200" height="52" rx="26"/></clipPath></defs>
+  <rect x="110" y="76" width="200" height="52" rx="26" fill="#8E5BD6"/>
+  <rect x="100" y="108" width="220" height="24" fill="#6339A6" clip-path="url(#cpu)"/>
+  <rect x="132" y="86" width="40" height="16" rx="8" fill="#FFF8EC"/>
+  <ellipse cx="196" cy="100" rx="14" ry="16" fill="#FFF8EC"/>
+  <ellipse cx="196" cy="100" rx="14" ry="16" fill="none" stroke="#2A2238" stroke-width="5" stroke-linejoin="round"/>
+  <circle cx="192" cy="107" r="8" fill="#2A2238"/>
+  <ellipse cx="236" cy="100" rx="14" ry="16" fill="#FFF8EC"/>
+  <ellipse cx="236" cy="100" rx="14" ry="16" fill="none" stroke="#2A2238" stroke-width="5" stroke-linejoin="round"/>
+  <circle cx="232" cy="107" r="8" fill="#2A2238"/>
+  <rect x="110" y="76" width="200" height="52" rx="26" fill="none" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+  <circle cx="148" cy="190" r="36" fill="#E4E6F0"/>
+  <circle cx="143" cy="185" r="29" fill="#FFF8EC"/>
+  <circle cx="148" cy="190" r="36" fill="none" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+  <defs><clipPath id="paddle"><rect x="50" y="234" width="200" height="52" rx="26"/></clipPath></defs>
+  <rect x="50" y="234" width="200" height="52" rx="26" fill="#FFD23F"/>
+  <rect x="40" y="266" width="220" height="24" fill="#D9A21B" clip-path="url(#paddle)"/>
+  <rect x="76" y="244" width="56" height="16" rx="8" fill="#FFF8EC"/>
+  <rect x="50" y="234" width="200" height="52" rx="26" fill="none" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+  <line x1="8" y1="56" x2="352" y2="56" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+  <line x1="8" y1="304" x2="352" y2="304" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+  <rect x="8" y="8" width="344" height="344" rx="56" fill="none" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+</svg>
