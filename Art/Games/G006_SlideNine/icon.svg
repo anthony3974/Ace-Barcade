@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="360" viewBox="0 0 360 360">
+  <defs><clipPath id="card"><rect x="8" y="8" width="344" height="344" rx="56"/></clipPath></defs>
+  <rect x="8" y="8" width="344" height="344" rx="56" fill="#3B3355"/>
+  <circle cx="300" cy="64" r="60" fill="#5C5A78" clip-path="url(#card)"/>
+  <defs><clipPath id="tray"><rect x="26" y="26" width="308" height="308" rx="44"/></clipPath></defs>
+  <rect x="26" y="26" width="308" height="308" rx="44" fill="#3A7BD5"/>
+  <rect x="20" y="306" width="320" height="34" fill="#2A559C" clip-path="url(#tray)"/>
+  <rect x="26" y="26" width="308" height="308" rx="44" fill="none" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+  <defs><clipPath id="t00"><rect x="46" y="46" width="84" height="84" rx="15.1"/></clipPath></defs>
+  <rect x="46" y="46" width="84" height="84" rx="15.1" fill="#3FAE5A"/>
+  <rect x="42" y="109.0" width="92" height="25.0" fill="#2A7F45" clip-path="url(#t00)"/>
+  <rect x="55.2" y="54.4" width="28.0" height="16" rx="8" fill="#FFF8EC"/>
+  <rect x="46" y="46" width="84" height="84" rx="15.1" fill="none" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+  <defs><clipPath id="t10"><rect x="140" y="46" width="84" height="84" rx="15.1"/></clipPath></defs>
+  <rect x="140" y="46" width="84" height="84" rx="15.1" fill="#3FAE5A"/>
+  <rect x="136" y="109.0" width="92" height="25.0" fill="#2A7F45" clip-path="url(#t10)"/>
+  <rect x="149.2" y="54.4" width="28.0" height="16" rx="8" fill="#FFF8EC"/>
+  <rect x="140" y="46" width="84" height="84" rx="15.1" fill="none" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+  <defs><clipPath id="t20"><rect x="234" y="46" width="84" height="84" rx="15.1"/></clipPath></defs>
+  <rect x="234" y="46" width="84" height="84" rx="15.1" fill="#FFD23F"/>
+  <rect x="230" y="109.0" width="92" height="25.0" fill="#D9A21B" clip-path="url(#t20)"/>
+  <rect x="243.2" y="54.4" width="28.0" height="16" rx="8" fill="#FFF8EC"/>
+  <rect x="234" y="46" width="84" height="84" rx="15.1" fill="none" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+  <defs><clipPath id="t01"><rect x="46" y="140" width="84" height="84" rx="15.1"/></clipPath></defs>
+  <rect x="46" y="140" width="84" height="84" rx="15.1" fill="#FFD23F"/>
+  <rect x="42" y="203.0" width="92" height="25.0" fill="#D9A21B" clip-path="url(#t01)"/>
+  <rect x="55.2" y="148.4" width="28.0" height="16" rx="8" fill="#FFF8EC"/>
+  <rect x="46" y="140" width="84" height="84" rx="15.1" fill="none" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+  <defs><clipPath id="t11"><rect x="140" y="140" width="84" height="84" rx="15.1"/></clipPath></defs>
+  <rect x="140" y="140" width="84" height="84" rx="15.1" fill="#3FAE5A"/>
+  <rect x="136" y="203.0" width="92" height="25.0" fill="#2A7F45" clip-path="url(#t11)"/>
+  <rect x="149.2" y="148.4" width="28.0" height="16" rx="8" fill="#FFF8EC"/>
+  <rect x="140" y="140" width="84" height="84" rx="15.1" fill="none" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+  <defs><clipPath id="t21"><rect x="234" y="140" width="84" height="84" rx="15.1"/></clipPath></defs>
+  <rect x="234" y="140" width="84" height="84" rx="15.1" fill="#FFD23F"/>
+  <rect x="230" y="203.0" width="92" height="25.0" fill="#D9A21B" clip-path="url(#t21)"/>
+  <rect x="243.2" y="148.4" width="28.0" height="16" rx="8" fill="#FFF8EC"/>
+  <rect x="234" y="140" width="84" height="84" rx="15.1" fill="none" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+  <defs><clipPath id="t02"><rect x="46" y="234" width="84" height="84" rx="15.1"/></clipPath></defs>
+  <rect x="46" y="234" width="84" height="84" rx="15.1" fill="#FFD23F"/>
+  <rect x="42" y="297.0" width="92" height="25.0" fill="#D9A21B" clip-path="url(#t02)"/>
+  <rect x="55.2" y="242.4" width="28.0" height="16" rx="8" fill="#FFF8EC"/>
+  <rect x="46" y="234" width="84" height="84" rx="15.1" fill="none" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+  <defs><clipPath id="t12"><rect x="180" y="234" width="84" height="84" rx="15.1"/></clipPath></defs>
+  <rect x="180" y="234" width="84" height="84" rx="15.1" fill="#FFD23F"/>
+  <rect x="176" y="297.0" width="92" height="25.0" fill="#D9A21B" clip-path="url(#t12)"/>
+  <rect x="189.2" y="242.4" width="28.0" height="16" rx="8" fill="#FFF8EC"/>
+  <rect x="180" y="234" width="84" height="84" rx="15.1" fill="none" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+  <rect x="8" y="8" width="344" height="344" rx="56" fill="none" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+</svg>
