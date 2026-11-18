@@ -6,7 +6,7 @@ It's a personal project and won't be published to a store.
 
 ## Current state
 
-The app opens on the hub: a scrolling grid of game cards, two across and six down, each with the game's thumbnail, title and best score. Seventeen games so far, listed below; the first fifteen have been played on a phone. Around it is the shared kit every game uses: the HUD (score, best, pause, game-over card), the font, one-finger input, the portrait camera, best scores, game feel (squash, pop, shake, bursts) and the art pipeline with its style check. Sound is next. See [PLAN.md](PLAN.md) for what's next, [docs/STYLE.md](docs/STYLE.md) for the house style every game follows, and [docs/CONVENTIONS.md](docs/CONVENTIONS.md) for how the code is organised and how to add a game.
+The app opens on the hub: a scrolling grid of game cards, two across and six down, each with the game's thumbnail, title and best score. Eighteen games so far, listed below; the first fifteen have been played on a phone. Around it is the shared kit every game uses: the HUD (score, best, pause, game-over card), the font, one-finger input, the portrait camera, best scores, game feel (squash, pop, shake, bursts) and the art pipeline with its style check. Sound is next. See [PLAN.md](PLAN.md) for what's next, [docs/STYLE.md](docs/STYLE.md) for the house style every game follows, and [docs/CONVENTIONS.md](docs/CONVENTIONS.md) for how the code is organised and how to add a game.
 
 ## Playing
 
@@ -31,6 +31,7 @@ On the phone everything is one thumb: tap, hold, drag or swipe, depending on the
 | 015 | Pop Shot | Drag | Drag to aim (the dots show where it goes), let go to shoot. Match three or more colours to pop them; don't let the bubbles reach the red line. |
 | 016 | Cave Glide | Hold | Hold to lift the glider through the cave, let go to sink. The rock is safe; the red crystals aren't. Grab gems on the way. |
 | 017 | Rain Dodge | Drag | Drag the bee between the red drops falling from the storm clouds; lightning warns before it strikes. Grab gems, and a leaf takes one hit for you. |
+| 018 | Ring Stop | Tap | Tap when the spark running round the ring is on the green arc; it turns round and speeds up. Misses cost one of three lives, and a tap on red ends the run. |
 
 In the editor, the mouse stands in for the finger and Escape for Back. Use **Tools > Ace Barcade > Play Game...** to start in a game.
 

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="360" viewBox="0 0 360 360">
+<defs><clipPath id="card"><rect x="8" y="8" width="344" height="344" rx="56"/></clipPath><clipPath id="track"><circle cx="180" cy="186" r="136"/></clipPath></defs>
+<rect x="8" y="8" width="344" height="344" rx="56" fill="#3B3355"/>
+<g clip-path="url(#card)">
+  <circle cx="46" cy="52" r="8" fill="#5C5A78"/>
+  <circle cx="316" cy="48" r="9" fill="#5C5A78"/>
+  <circle cx="36" cy="310" r="8" fill="#5C5A78"/>
+  <circle cx="322" cy="318" r="10" fill="#5C5A78"/>
+  <circle cx="300" cy="120" r="6" fill="#5C5A78"/>
+</g>
+<circle cx="180" cy="186" r="136" fill="#6339A6"/>
+<g clip-path="url(#track)"><circle cx="175" cy="181" r="136" fill="#8E5BD6"/></g>
+<circle cx="180" cy="186" r="96" fill="#3B3355"/>
+<circle cx="180" cy="186" r="136" fill="none" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+<circle cx="180" cy="186" r="96" fill="none" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+<path d="M 245.3 308.7 A 139.0 139.0 0 0 0 317.6 205.3 A 23.0 23.0 0 0 0 272.1 198.9 A 93.0 93.0 0 0 1 223.7 268.1 A 23.0 23.0 0 0 0 245.3 308.7 Z" fill="#2A7F45"/>
+<path d="M 248.0 303.8 A 136.0 136.0 0 0 0 314.3 207.3 A 17.0 17.0 0 0 0 280.7 202.0 A 102.0 102.0 0 0 1 231.0 274.3 A 17.0 17.0 0 0 0 248.0 303.8 Z" fill="#3FAE5A"/>
+<path d="M 278.9 271.9 A 131.0 131.0 0 0 0 294.6 249.5 A 12.0 12.0 0 0 0 273.6 237.9 A 107.0 107.0 0 0 1 260.8 256.2 A 12.0 12.0 0 0 0 278.9 271.9 Z" fill="#9BD84E"/>
+<path d="M 245.3 308.7 A 139.0 139.0 0 0 0 317.6 205.3 A 23.0 23.0 0 0 0 272.1 198.9 A 93.0 93.0 0 0 1 223.7 268.1 A 23.0 23.0 0 0 0 245.3 308.7 Z" fill="none" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+<g transform="translate(68.5 85.6) rotate(-48.0)"><polygon points="0,-18 14,10 -14,10" fill="#E5484D"/><polygon points="0,-18 14,10 2,10" fill="#B5303A"/><polygon points="0,-18 14,10 -14,10" fill="none" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/></g>
+<g transform="translate(51.4 108.7) rotate(-59.0)"><polygon points="0,-18 14,10 -14,10" fill="#E5484D"/><polygon points="0,-18 14,10 2,10" fill="#B5303A"/><polygon points="0,-18 14,10 -14,10" fill="none" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/></g>
+<g transform="translate(39.0 134.7) rotate(-70.0)"><polygon points="0,-18 14,10 -14,10" fill="#E5484D"/><polygon points="0,-18 14,10 2,10" fill="#B5303A"/><polygon points="0,-18 14,10 -14,10" fill="none" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/></g>
+<path d="M 87.0 82.7 A 139.0 139.0 0 0 0 45.1 152.4 A 23.0 23.0 0 0 0 89.8 163.5 A 93.0 93.0 0 0 1 117.8 116.9 A 23.0 23.0 0 0 0 87.0 82.7 Z" fill="#B5303A"/>
+<path d="M 85.5 88.2 A 136.0 136.0 0 0 0 48.6 150.8 A 17.0 17.0 0 0 0 81.5 159.6 A 102.0 102.0 0 0 1 109.1 112.6 A 17.0 17.0 0 0 0 85.5 88.2 Z" fill="#E5484D"/>
+<path d="M 87.0 82.7 A 139.0 139.0 0 0 0 45.1 152.4 A 23.0 23.0 0 0 0 89.8 163.5 A 93.0 93.0 0 0 1 117.8 116.9 A 23.0 23.0 0 0 0 87.0 82.7 Z" fill="none" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+<circle cx="180" cy="186" r="58" fill="#2A559C"/>
+<clipPath id="pl"><circle cx="180" cy="186" r="58"/></clipPath>
+<g clip-path="url(#pl)"><circle cx="173" cy="179" r="58" fill="#3A7BD5"/><circle cx="210" cy="220" r="10" fill="#2A559C"/></g>
+<ellipse cx="162" cy="184" rx="14" ry="18" fill="#FFF8EC"/>
+<circle cx="169" cy="190" r="8" fill="#2A2238"/>
+<ellipse cx="162" cy="184" rx="14" ry="18" fill="none" stroke="#2A2238" stroke-width="5" stroke-linejoin="round"/>
+<ellipse cx="198" cy="184" rx="14" ry="18" fill="#FFF8EC"/>
+<circle cx="205" cy="190" r="8" fill="#2A2238"/>
+<ellipse cx="198" cy="184" rx="14" ry="18" fill="none" stroke="#2A2238" stroke-width="5" stroke-linejoin="round"/>
+<circle cx="180" cy="186" r="58" fill="none" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+<circle cx="273.8" cy="117.8" r="8" fill="#F28C38"/>
+<circle cx="283.4" cy="133.3" r="11" fill="#F28C38"/>
+<circle cx="290.3" cy="150.2" r="14" fill="#F28C38"/>
+<g transform="translate(251.1 137.2) scale(0.8) rotate(90 56 56)">
+<clipPath id="sb"><circle cx="56" cy="56" r="44"/></clipPath>
+<circle cx="56" cy="56" r="44" fill="#D9A21B"/>
+<g clip-path="url(#sb)"><circle cx="48" cy="48" r="44" fill="#FFD23F"/></g>
+<ellipse cx="64" cy="48" rx="11" ry="14" fill="#FFF8EC"/><circle cx="68" cy="50" r="7" fill="#2A2238"/>
+<ellipse cx="64" cy="48" rx="11" ry="14" fill="none" stroke="#2A2238" stroke-width="5" stroke-linejoin="round"/>
+<ellipse cx="88" cy="48" rx="9" ry="13" fill="#FFF8EC"/><circle cx="91" cy="50" r="6" fill="#2A2238"/>
+<ellipse cx="88" cy="48" rx="9" ry="13" fill="none" stroke="#2A2238" stroke-width="5" stroke-linejoin="round"/>
+<circle cx="56" cy="56" r="44" fill="none" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+</g>
+<rect x="8" y="8" width="344" height="344" rx="56" fill="none" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+</svg>
