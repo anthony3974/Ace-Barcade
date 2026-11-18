@@ -243,9 +243,12 @@ Every game, built or planned, with its number and id. **This list is where numbe
 | 016 | `cave-glide` | Cave Glide | Hold | Cave flyer: hold to rise, let go to fall, through a narrowing cave | Built, on main; waiting on phone check | 21 |
 | 017 | `rain-dodge` | Rain Dodge | Drag | Dodge field: drag around falling hazards, grab pickups | Built, on main; waiting on phone check | 22 |
 | 018 | `ring-stop` | Ring Stop | Tap | Timing ring: tap when the spinning marker crosses the target | **Next** | |
-| 019 | `slice-storm` | Slice Storm | Swipe | Slicer: swipe through flying things, not the red ones | Planned | |
+| 019 | `pocket-putt` | Pocket Putt | Pull | Mini golf, one hole per screen, seen from above: pull back from the ball to aim (a dotted arrow shows aim and power), let go to putt. 3 putts a hole; sinking it scores 3, 2 or 1 by putts taken, missing costs one of three lives. Fresh holes forever, adding bumpers, sand, red water and moving blockers | Planned | |
+| 020 | `hoop-fling` | Hoop Fling | Pull | Hoop toss, seen from the side: pull the ball back and let go to arc it into the hoop. Each basket scores, a clean one (no rim) earns a bonus; the hoop moves, then slides. Three misses end the run | Planned | |
+| 021 | `lily-leap` | Lily Leap | Pull | Frog hopper: pull back to aim each jump from lily pad to lily pad up the screen; miss a pad and you're in the water | Planned | |
+| 022 | `slice-storm` | Slice Storm | Swipe | Slicer: swipe through flying things, not the red ones | Planned | |
 
-Planned games are in the owner's order (006 to 015), then older ideas (016 on). The "-style" notes name the genre only: each game still gets its own original name, characters and look. New ideas go at the bottom as *Planned*, with the next free number.
+Planned games are in the owner's order (006 to 015), then older ideas (016 to 018), then the owner's order again (019 to 021), then older ideas (022 on). Games 019 to 021 use a new **Pull** control (drag back, let go): add `Pull` to the `Controls` enum (`Assets/Scripts/Core/ArcadeGameAttribute.cs`) with the first of them. The "-style" notes name the genre only: each game still gets its own original name, characters and look. New ideas go at the bottom as *Planned*, with the next free number.
 
 ## Maybe later
 - A daily challenge game with its own leaderboard on the phone.
