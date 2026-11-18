@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 180 180">
+  <defs><clipPath id="body"><path d="M 20 110 C 20 60 50 34 90 34 C 130 34 160 60 160 110 L 160 176 L 20 176 Z"/></clipPath></defs>
+  <rect x="74" y="8" width="32" height="32" rx="7" transform="rotate(45 90 24)" fill="#9BD84E" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M 20 110 C 20 60 50 34 90 34 C 130 34 160 60 160 110 L 160 176 L 20 176 Z" fill="#1E8F86"/>
+  <g clip-path="url(#body)"><path d="M 20 110 C 20 60 50 34 90 34 C 130 34 160 60 160 110 L 160 176 L 20 176 Z" transform="translate(-12 -8)" fill="#2EC4B6"/></g>
+  <rect x="40" y="58" width="26" height="18" rx="9" transform="rotate(-35 53 67)" fill="#FFF8EC"/>
+  <ellipse cx="70" cy="96" rx="15" ry="19" fill="#FFF8EC"/>
+  <ellipse cx="112" cy="96" rx="15" ry="19" fill="#FFF8EC"/>
+  <circle cx="72" cy="100" r="9" fill="#2A2238"/>
+  <circle cx="110" cy="100" r="9" fill="#2A2238"/>
+  <ellipse cx="70" cy="96" rx="15" ry="19" fill="none" stroke="#2A2238" stroke-width="5" stroke-linejoin="round"/>
+  <ellipse cx="112" cy="96" rx="15" ry="19" fill="none" stroke="#2A2238" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M 76 126 Q 91 144 106 126 Z" fill="#2A2238" stroke="#2A2238" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M 20 110 C 20 60 50 34 90 34 C 130 34 160 60 160 110 L 160 176 L 20 176 Z" fill="none" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+</svg>

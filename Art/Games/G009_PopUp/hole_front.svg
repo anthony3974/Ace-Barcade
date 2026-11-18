@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="264" viewBox="0 0 240 264">
+  <defs><clipPath id="mound"><path d="M 4 64 Q 4 44 20 44 A 100 36 0 0 0 220 44 Q 236 44 236 64 L 236 248 Q 236 260 224 260 L 16 260 Q 4 260 4 248 Z"/></clipPath></defs>
+  <path d="M 4 64 Q 4 44 20 44 A 100 36 0 0 0 220 44 Q 236 44 236 64 L 236 248 Q 236 260 224 260 L 16 260 Q 4 260 4 248 Z" fill="#A0663F"/>
+  <rect x="204" y="0" width="40" height="264" fill="#6E4426" clip-path="url(#mound)"/>
+  <ellipse cx="120" cy="44" rx="114" ry="52" fill="#F2C69B" clip-path="url(#mound)"/>
+  <path d="M 30 150 Q 50 140 70 150" fill="none" stroke="#6E4426" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M 120 200 Q 140 190 160 200" fill="none" stroke="#6E4426" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M 150 120 Q 165 112 180 120" fill="none" stroke="#6E4426" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M 4 64 Q 4 44 20 44 A 100 36 0 0 0 220 44 Q 236 44 236 64 L 236 248 Q 236 260 224 260 L 16 260 Q 4 260 4 248 Z" fill="none" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+  <ellipse cx="120" cy="44" rx="100" ry="36" fill="none" stroke="#2A2238" stroke-width="8" stroke-linejoin="round" clip-path="url(#mound)"/>
+</svg>
