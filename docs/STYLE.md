@@ -79,6 +79,10 @@ UI panels that stretch (the hub's cards) are 9-slice art: an SVG whose name ends
 
 Every game has `Art/Games/G###_Name/icon.svg`, **exactly 360 x 360 px** **(checked)**: a rounded square (radius 56 px, Ink outline) showing the game's own background, with its main objects large in the middle, outlined like everything else. `Art/Games/G001_PaddleRally/icon.svg` is the template. No text on icons; the hub prints the title. The icon is the thumbnail on the game's hub card, shown at about 200 px, so keep it bold and simple.
 
+## App icon
+
+The launcher icon is a gold arcade coin with a star, on the Night background. It lives in `Art/AppIcon/` as Android's two adaptive layers, `background.svg` (full bleed, no outlines) and `foreground.svg`, each 216 x 216 px (the 108 dp canvas at 2 px per dp, so outlines read at launcher size). Phones crop it to the middle 144 px in their own shape (circle, squircle, rounded square), and only the middle circle of radius 66 px is safe from every shape, so the coin stays inside it. `Art/build-sprites.sh` renders it to `Assets/AppIcon/` (the two layers, plus flattened round and square versions for Android 7) and **Apply Project Settings** sets it as the app icon.
+
 ## New game checklist
 
 Before a game is ticked off:

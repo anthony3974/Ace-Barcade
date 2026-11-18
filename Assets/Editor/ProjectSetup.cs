@@ -1,4 +1,5 @@
 using UnityEditor;
+using UnityEditor.Android;
 using UnityEditor.Build;
 using UnityEditor.SceneManagement;
 using UnityEngine;
@@ -20,6 +21,7 @@ namespace AceBarcade.EditorTools
         public static void Apply()
         {
             ApplyPlayerSettings();
+            ApplyIcons();
             ApplyRenderSettings();
             FontSetup.Ensure();
             CreateScene();
@@ -46,6 +48,35 @@ namespace AceBarcade.EditorTools
             PlayerSettings.SetScriptingBackend(NamedBuildTarget.Android, ScriptingImplementation.IL2CPP);
             PlayerSettings.Android.targetArchitectures = AndroidArchitecture.ARM64;
             PlayerSettings.SetManagedStrippingLevel(NamedBuildTarget.Android, ManagedStrippingLevel.Low);
+        }
+
+        const string IconFolder = "Assets/AppIcon";
+
+        /// <summary>
+        /// The launcher icon, from the PNGs Art/build_app_icon.py renders: the two adaptive layers for
+        /// Android 8+, and flattened round and square versions for Android 7.
+        /// </summary>
+        static void ApplyIcons()
+        {
+            Texture2D Load(string name)
+            {
+                var path = $"{IconFolder}/{name}.png";
+                var tex = AssetDatabase.LoadAssetAtPath<Texture2D>(path);
+                if (tex == null) Debug.LogError($"[Ace Barcade] App icon {path} is missing: run Build Sprites.");
+                return tex;
+            }
+
+            var android = NamedBuildTarget.Android;
+            void Set(PlatformIconKind kind, params Texture2D[] layers)
+            {
+                var icons = PlayerSettings.GetPlatformIcons(android, kind);
+                foreach (var icon in icons) icon.SetTextures(layers);
+                PlayerSettings.SetPlatformIcons(android, kind, icons);
+            }
+
+            Set(AndroidPlatformIconKind.Adaptive, Load("background"), Load("foreground"));
+            Set(AndroidPlatformIconKind.Round, Load("round"));
+            Set(AndroidPlatformIconKind.Legacy, Load("legacy"));
         }
 
         static void ApplyRenderSettings()

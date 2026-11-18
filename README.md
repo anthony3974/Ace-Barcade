@@ -41,6 +41,8 @@ To check that the code compiles without opening Unity (after Unity has opened th
 
 All art is hand-built SVG in `Art/`, authored at 120 px per unit, and converted to PNG sprites in `Assets/Resources/Sprites/` by `Art/build-sprites.sh` (or **Tools > Ace Barcade > Build Sprites**). It needs `rsvg-convert` (from librsvg) and `python3`.
 
+The app's launcher icon (a gold arcade coin) is drawn the same way, in `Art/AppIcon/`, and rendered to `Assets/AppIcon/` by the same script.
+
 Before converting, `Art/check-style.sh` checks every SVG against the house style: palette colors only, no gradients or transparency, 8 px or 5 px outlines with round joins, and a 360 x 360 icon for each game. Art that breaks a rule doesn't get built.
 
 ## Credits

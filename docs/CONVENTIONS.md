@@ -65,9 +65,11 @@ Art/
   Shared/Props/              things more than one game uses (paddle, ball, gem, spikes):
                              load them with PropSprite("paddle") so they look the same everywhere
   Games/G001_Name/           one game's art, including icon.svg (360 x 360)
+  AppIcon/                   the Android launcher icon (build_app_icon.py renders it)
   _anything/                 scratch: skipped by both scripts
 Assets/
   Scenes/Arcade.unity        the only scene
+  AppIcon/                   generated launcher icon PNGs; ProjectSetup sets them as the app icon
   Resources/Sprites/         generated PNGs (a mirror of Art/); don't edit by hand
   Resources/Fonts/           generated: the Lilita One TextMeshPro font (FontSetup.cs)
   Fonts/                     Lilita One .ttf and its licence
