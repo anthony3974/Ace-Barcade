@@ -31,7 +31,7 @@ namespace AceBarcade.EditorTools
         {
             PlayerSettings.companyName = "Tony3974";
             PlayerSettings.productName = "Ace Barcade";
-            PlayerSettings.bundleVersion = "0.8";
+            PlayerSettings.bundleVersion = "0.9";
             PlayerSettings.SetApplicationIdentifier(NamedBuildTarget.Android, "com.Tony3974.AceBarcade");
 
             // Portrait only, on Android only.
@@ -41,7 +41,7 @@ namespace AceBarcade.EditorTools
             PlayerSettings.allowedAutorotateToLandscapeLeft = false;
             PlayerSettings.allowedAutorotateToLandscapeRight = false;
 
-            PlayerSettings.Android.bundleVersionCode = 8;
+            PlayerSettings.Android.bundleVersionCode = 9;
             PlayerSettings.Android.minSdkVersion = AndroidSdkVersions.AndroidApiLevel24;
             PlayerSettings.SetScriptingBackend(NamedBuildTarget.Android, ScriptingImplementation.IL2CPP);
             PlayerSettings.Android.targetArchitectures = AndroidArchitecture.ARM64;
