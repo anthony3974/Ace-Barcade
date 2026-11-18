@@ -44,6 +44,7 @@ namespace AceBarcade.Games.PaddleRally
 - `Play(dt)` is only called while playing. Pausing also sets `Time.timeScale` to 0, so helper components that use `Time.deltaTime` stop too.
 - Input is one finger: `Input.Pressed`, `Down`, `Up`, `Tapped`, `Swipe`, `Position`, `DragDelta`, `HeldFor`. Positions are in world units. Never read the Input System directly in a game.
 - Colors come from `Palette`, sizes from `Style`. Feel comes from `Juice` (`Squash`, `Pop`, `ShakeSmall`, `ShakeBig`, `Burst`), plain shapes and outlined walls from `Shapes`.
+- To clip things to an area (Noodle's board, whose edges wrap), use a `SpriteMask` and set `maskInteraction` on the plain `Shapes` to clip. Don't mask art sprites: under URP 2D they draw as flat white silhouettes. Hide them instead while they cross the edge.
 - Put rules and maths that can be tested (scoring, spawning, collisions on paper) in plain C# classes, and test them in edit mode.
 
 ## Numbers, ids and names
