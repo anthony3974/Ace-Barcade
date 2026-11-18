@@ -6,7 +6,7 @@ It's a personal project and won't be published to a store.
 
 ## Current state
 
-The app opens on the hub: a scrolling grid of game cards, two across and six down, each with the game's thumbnail, title and best score. Six games so far, all waiting on their first playtest on a phone: **Paddle Rally** (drag to keep a ball out of the spikes), **Drop Stack** (a falling-block puzzle), **Brick Burst** (a brick breaker), **Rocket Lanes** (swipe between lanes to dodge mines), **Paddle Duel** (table tennis against the computer) and **Slide Nine** (a sliding puzzle against the clock). Around it is the shared kit every game uses: the HUD (score, best, pause, game-over card), the font, one-finger input, the portrait camera, best scores, game feel (squash, pop, shake, bursts) and the art pipeline with its style check. Sound is next. See [PLAN.md](PLAN.md) for what's next, [docs/STYLE.md](docs/STYLE.md) for the house style every game follows, and [docs/CONVENTIONS.md](docs/CONVENTIONS.md) for how the code is organised and how to add a game.
+The app opens on the hub: a scrolling grid of game cards, two across and six down, each with the game's thumbnail, title and best score. Thirteen games so far, listed below, all waiting on their first playtest on a phone. Around it is the shared kit every game uses: the HUD (score, best, pause, game-over card), the font, one-finger input, the portrait camera, best scores, game feel (squash, pop, shake, bursts) and the art pipeline with its style check. Sound is next. See [PLAN.md](PLAN.md) for what's next, [docs/STYLE.md](docs/STYLE.md) for the house style every game follows, and [docs/CONVENTIONS.md](docs/CONVENTIONS.md) for how the code is organised and how to add a game.
 
 ## Playing
 
@@ -20,6 +20,13 @@ On the phone everything is one thumb: tap, hold, drag or swipe, depending on the
 | 004 | Rocket Lanes | Swipe | Swipe left or right to change lanes and dodge the rows of mines. Fly through crystals for bonus points. |
 | 005 | Paddle Duel | Drag | Get the ball past the computer's paddle at the top. Hit near your paddle's ends for sharp angles it can't reach. Three balls. |
 | 006 | Slide Nine | Tap | Tap tiles to slide them into the gap and put 1 to 8 in order. Each solve adds time; fewer moves score more. |
+| 007 | Noodle | Swipe | Steer a noodle round a board whose edges wrap. Eat peas to grow; don't bite yourself or the red chilies. Gems are worth more. |
+| 008 | Wing It | Tap | Tap to flap a bee through the gaps in thorny red columns. Fly through gems for bonus points. |
+| 009 | Pop Up | Tap | Tap the green sprouts as they pop out of the stumps, but never the red spiky ones. Teal ones are worth more. Three lives. |
+| 010 | Bounce Up | Hold | Bounce up from pad to pad; hold the left or right half of the screen to steer. Watch out for crumbling pads and red burrs. |
+| 011 | Star Swarm | Drag | Slide your ship to dodge bullets and divers while it shoots the waves of bugs for you. Catch falling gems. Three lives. |
+| 012 | Duck Runner | Tap, swipe down | Tap to jump over foxes, logs and turtles; swipe down to duck under hawks and hanging leaves. Jump for decoy ducks. |
+| 013 | Stack Tower | Tap | Tap to drop each sliding floor onto the tower. Whatever hangs over is cut off; perfect drops keep it whole. |
 
 In the editor, the mouse stands in for the finger and Escape for Back. Use **Tools > Ace Barcade > Play Game...** to start in a game.
 
