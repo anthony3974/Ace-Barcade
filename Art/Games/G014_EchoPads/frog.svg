@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="136" viewBox="0 0 150 136">
+<g transform="translate(0 0) scale(1)">
+<defs><clipPath id="frog"><path d="M 19.6 50.9 A 26 26 0 1 1 68.4 50.9 Q 75 54 81.6 50.9 A 26 26 0 1 1 130.4 50.9 C 136 62 138 80 136 96 C 136 120 110 126 75 126 C 40 126 14 120 14 96 C 12 80 14 62 19.6 50.9 Z"/></clipPath></defs>
+<path d="M 19.6 50.9 A 26 26 0 1 1 68.4 50.9 Q 75 54 81.6 50.9 A 26 26 0 1 1 130.4 50.9 C 136 62 138 80 136 96 C 136 120 110 126 75 126 C 40 126 14 120 14 96 C 12 80 14 62 19.6 50.9 Z" fill="#D9A21B"/>
+<g clip-path="url(#frog)"><path d="M 19.6 50.9 A 26 26 0 1 1 68.4 50.9 Q 75 54 81.6 50.9 A 26 26 0 1 1 130.4 50.9 C 136 62 138 80 136 96 C 136 120 110 126 75 126 C 40 126 14 120 14 96 C 12 80 14 62 19.6 50.9 Z" transform="translate(-8 -8)" fill="#FFD23F"/></g>
+<ellipse cx="44" cy="44" rx="15" ry="17" fill="#FFF8EC"/>
+<ellipse cx="106" cy="44" rx="15" ry="17" fill="#FFF8EC"/>
+<circle cx="47" cy="47" r="8" fill="#2A2238"/>
+<circle cx="103" cy="47" r="8" fill="#2A2238"/>
+<ellipse cx="44" cy="44" rx="15" ry="17" fill="none" stroke="#2A2238" stroke-width="5" stroke-linejoin="round"/>
+<ellipse cx="106" cy="44" rx="15" ry="17" fill="none" stroke="#2A2238" stroke-width="5" stroke-linejoin="round"/>
+<path d="M 52 90 Q 75 106 98 90" fill="none" stroke="#2A2238" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="26" y="78" width="16" height="16" rx="8" fill="#F28C38"/>
+<rect x="108" y="78" width="16" height="16" rx="8" fill="#F28C38"/>
+<path d="M 19.6 50.9 A 26 26 0 1 1 68.4 50.9 Q 75 54 81.6 50.9 A 26 26 0 1 1 130.4 50.9 C 136 62 138 80 136 96 C 136 120 110 126 75 126 C 40 126 14 120 14 96 C 12 80 14 62 19.6 50.9 Z" fill="none" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+</g>
+</svg>

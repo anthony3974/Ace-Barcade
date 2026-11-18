@@ -6,7 +6,7 @@ It's a personal project and won't be published to a store.
 
 ## Current state
 
-The app opens on the hub: a scrolling grid of game cards, two across and six down, each with the game's thumbnail, title and best score. Thirteen games so far, listed below, all waiting on their first playtest on a phone. Around it is the shared kit every game uses: the HUD (score, best, pause, game-over card), the font, one-finger input, the portrait camera, best scores, game feel (squash, pop, shake, bursts) and the art pipeline with its style check. Sound is next. See [PLAN.md](PLAN.md) for what's next, [docs/STYLE.md](docs/STYLE.md) for the house style every game follows, and [docs/CONVENTIONS.md](docs/CONVENTIONS.md) for how the code is organised and how to add a game.
+The app opens on the hub: a scrolling grid of game cards, two across and six down, each with the game's thumbnail, title and best score. Fourteen games so far, listed below, all waiting on their first playtest on a phone. Around it is the shared kit every game uses: the HUD (score, best, pause, game-over card), the font, one-finger input, the portrait camera, best scores, game feel (squash, pop, shake, bursts) and the art pipeline with its style check. Sound is next. See [PLAN.md](PLAN.md) for what's next, [docs/STYLE.md](docs/STYLE.md) for the house style every game follows, and [docs/CONVENTIONS.md](docs/CONVENTIONS.md) for how the code is organised and how to add a game.
 
 ## Playing
 
@@ -27,6 +27,7 @@ On the phone everything is one thumb: tap, hold, drag or swipe, depending on the
 | 011 | Star Swarm | Drag | Slide your ship to dodge bullets and divers while it shoots the waves of bugs for you. Catch falling gems. Three lives. |
 | 012 | Duck Runner | Tap, swipe down | Tap to jump over foxes, logs and turtles; swipe down to duck under hawks and hanging leaves. Jump for decoy ducks. |
 | 013 | Stack Tower | Tap | Tap to drop each sliding floor onto the tower. Whatever hangs over is cut off; perfect drops keep it whole. |
+| 014 | Echo Pads | Tap | Watch the lily pads light up in a tune, then tap them back in order. Each round adds a note. Three lives. |
 
 In the editor, the mouse stands in for the finger and Escape for Back. Use **Tools > Ace Barcade > Play Game...** to start in a game.
 
