@@ -34,7 +34,7 @@ Each task is small enough for one session and ends with a check. Tick it off whe
 
 Unity locks the project while the editor is open, so change Project Settings through `Assets/Editor/ProjectSetup.cs` (**Tools > Ace Barcade > Apply Project Settings**) rather than the settings window or the files on disk.
 
-**Status (2026-11-18):** Games 001 to 015 are built, merged and released, and the owner has played every one on the phone: they all work (tasks 6 to 20 are ticked). The hub opens the app and the shared kit (HUD, font, input, feel, art pipeline and style check) is in place. Still open: the owner's sign-off on the look (task 3) and the hub (task 4), and sound and haptics (task 5). Next game: 016, **Cave Glide**; every game and its number is in the [games list](#games-list).
+**Status (2026-11-18):** Games 001 to 015 are built, merged and released, and the owner has played every one on the phone: they all work (tasks 6 to 20 are ticked). The hub opens the app and the shared kit (HUD, font, input, feel, art pipeline and style check) is in place. Still open: the owner's sign-off on the look (task 3) and the hub (task 4), and sound and haptics (task 5). Game 016, **Cave Glide**, is merged (task 21) and waiting on the phone check. Next game: 017, **Rain Dodge**; every game and its number is in the [games list](#games-list).
 
 ### Setup
 - [x] **1. Project and repo.** Universal 2D project, identity `Tony3974`, product `Ace Barcade`, id `com.Tony3974.AceBarcade`. Android, portrait, IL2CPP ARM64, min API 24, no HDR or MSAA. Assemblies: `AceBarcade` (shared), `AceBarcade.Games`, `AceBarcade.Editor`, `AceBarcade.Tests`, `AceBarcade.PlayTests`. The core: `ArcadeGame`, `GameRegistry`, `ArcadeInput` (tap, hold, drag, swipe, Back), `ArcadeCamera` (fixed 9 x 16 view), `Scores`, `Sprites`, `Palette`, `Style`. *Check: edit mode tests pass, and the repo is on GitHub.*
@@ -200,6 +200,15 @@ Take the next game from the [games list](#games-list) (or swap the order with th
   - Clearing the board: a lime burst, and four new rows slide in.
   - A bubble stuck below the red line: red bursts along it, a big shake and the game-over card.
   - Aiming is precise enough to thread a gap, and the dots are easy to see.
+- [ ] **21. Game 016: Cave Glide** (on the `cave-glide` branch). A cave flyer: a yellow paper glider flies through a winding cave that scrolls past from the right. **Hold** anywhere to lift it; let go and it sinks. Our own take on the genre: the brown rock is safe to bump along (it just stops the glider, with a puff of dust), and the danger is red crystals growing from the ceiling and the floor, mostly on alternate sides so the way through weaves. Every 2 units flown scores 1, and teal gems along the middle of the way score 5. The cave gets faster (4.5 to 7 units a second, at 125 units in) and narrower (7.5 to 5.6 high), crystals come closer together (every 8 units, down to 3) and grow longer (1, then 1.4, then 1.8 units). **Fair by design:** the cave is built around a hidden path that never climbs or drops more steeply than the glider can follow at top speed, never bends more sharply than it can turn, and levels off before it reaches the top or bottom; no crystal's point comes within 1.2 units of it, and crystals hit a little inside their drawn edge. Rules in `CaveSim` (9 edit mode tests, including a player whose finger lags 0.12 s behind their decisions flying 390 units, past top speed and the narrowest cave, on every seed). A play mode test glides for 25 seconds picking up gems, then lets go and sinks into a crystal, and retries. Built; waiting on the owner's phone check. *Check, on the phone:*
+  - Cave Glide's card is in the hub with the glider icon; tapping it shows the glider bobbing in a wide brown cave.
+  - The touch that starts the run is already a hold: the glider lifts straight away.
+  - **Hold**: it climbs, tilting up; **let go**: it sinks, tilting down. Neither is instant, but both answer quickly. A trail of puffs follows it.
+  - Bumping the ceiling or the floor just stops it with a squash and a puff; holding against the ceiling is safe.
+  - Red crystals hang from the ceiling and grow from the floor. Touching one gives a red burst and a big shake, and the glider tumbles to the floor; then the game-over card.
+  - Gems in the middle of the way burst teal for 5.
+  - It speeds up, narrows and gets busier, and by about 30 seconds in it's hard, but there's always a way through without sharp turns.
+  - Grazing past a crystal's point never ends the run when the glider looks clear of it.
 
 ## Games list
 Every game, built or planned, with its number and id. **This list is where numbers come from.** Before starting a game, take the first planned row and mark it *In progress* here, so two branches never take the same number (Brick Burst and Rocket Lanes both reached for 003 once). Numbers are never reused, and an id never changes once the game is on the phone, because best scores are saved under it. A planned game's title and id are working names and can still change before it's built. Every game gets its own original name and look (see *Not to copy*).
@@ -221,8 +230,8 @@ Every game, built or planned, with its number and id. **This list is where numbe
 | 013 | `stack-tower` | Stack Tower | Tap | Stacker: tap to drop each sliding block on the tower; overhangs get cut off | Done | 18 |
 | 014 | `echo-pads` | Echo Pads | Tap | Memory pattern: Simon-style coloured pads light up in a growing sequence; tap it back | Done | 19 |
 | 015 | `pop-shot` | Pop Shot | Drag | Bubble shooter: aim, shoot, and match three or more colours to pop them | Done | 20 |
-| 016 | `cave-glide` | Cave Glide | Hold | Cave flyer: hold to rise, let go to fall, through a narrowing cave | **Next** | |
-| 017 | `rain-dodge` | Rain Dodge | Drag | Dodge field: drag around falling hazards, grab pickups | Planned | |
+| 016 | `cave-glide` | Cave Glide | Hold | Cave flyer: hold to rise, let go to fall, through a narrowing cave | Built, on main; waiting on phone check | 21 |
+| 017 | `rain-dodge` | Rain Dodge | Drag | Dodge field: drag around falling hazards, grab pickups | **Next** | |
 | 018 | `ring-stop` | Ring Stop | Tap | Timing ring: tap when the spinning marker crosses the target | Planned | |
 | 019 | `slice-storm` | Slice Storm | Swipe | Slicer: swipe through flying things, not the red ones | Planned | |
 
