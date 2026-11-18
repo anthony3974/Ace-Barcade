@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="108" viewBox="0 0 120 108">
+<rect x="52" y="52" width="16" height="50" rx="8" fill="#A0663F"/>
+<rect x="52" y="52" width="16" height="50" rx="8" fill="none" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+<defs><clipPath id="leaf"><path d="M 8 60 Q 60 -8 112 60 Q 99 50 86 60 Q 73 50 60 60 Q 47 50 34 60 Q 21 50 8 60 Z"/></clipPath></defs>
+<path d="M 8 60 Q 60 -8 112 60 Q 99 50 86 60 Q 73 50 60 60 Q 47 50 34 60 Q 21 50 8 60 Z" fill="#2A7F45"/>
+<g clip-path="url(#leaf)"><path d="M 8 60 Q 60 -8 112 60 Q 99 50 86 60 Q 73 50 60 60 Q 47 50 34 60 Q 21 50 8 60 Z" transform="translate(-8 -8)" fill="#3FAE5A"/></g>
+<path d="M 60 22 L 60 54" fill="none" stroke="#2A2238" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 60 40 L 40 50" fill="none" stroke="#2A2238" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 60 40 L 80 50" fill="none" stroke="#2A2238" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 8 60 Q 60 -8 112 60 Q 99 50 86 60 Q 73 50 60 60 Q 47 50 34 60 Q 21 50 8 60 Z" fill="none" stroke="#2A2238" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+</svg>

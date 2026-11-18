@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="132" height="200" viewBox="0 0 132 200">
+<defs><clipPath id="db"><path d="M 66 10 C 87.0 41.5 126 67.0 126 100 A 60 60 0 0 1 6 100 C 6 67.0 45.0 41.5 66 10 Z"/></clipPath></defs>
+<path d="M 66 10 C 87.0 41.5 126 67.0 126 100 A 60 60 0 0 1 6 100 C 6 67.0 45.0 41.5 66 10 Z" fill="#B5303A"/>
+<g clip-path="url(#db)"><path d="M 66 10 C 87.0 41.5 126 67.0 126 100 A 60 60 0 0 1 6 100 C 6 67.0 45.0 41.5 66 10 Z" transform="translate(-10 -10)" fill="#E5484D"/></g>
+<path d="M 33 97 Q 33 73 48 58" fill="none" stroke="#FFF8EC" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+<ellipse cx="46" cy="104" rx="12" ry="14" fill="#FFF8EC"/>
+<circle cx="49" cy="108" r="8" fill="#2A2238"/>
+<ellipse cx="46" cy="104" rx="12" ry="14" fill="none" stroke="#2A2238" stroke-width="5" stroke-linejoin="round"/>
+<ellipse cx="86" cy="104" rx="12" ry="14" fill="#FFF8EC"/>
+<circle cx="83" cy="108" r="8" fill="#2A2238"/>
+<ellipse cx="86" cy="104" rx="12" ry="14" fill="none" stroke="#2A2238" stroke-width="5" stroke-linejoin="round"/>
+<path d="M 30 82 L 56 92" fill="none" stroke="#2A2238" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 102 82 L 76 92" fill="none" stroke="#2A2238" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 66 10 C 87.0 41.5 126 67.0 126 100 A 60 60 0 0 1 6 100 C 6 67.0 45.0 41.5 66 10 Z" fill="none" stroke="#2A2238" stroke-width="8" stroke-linejoin="round" stroke-linecap="round"/>
+</svg>
