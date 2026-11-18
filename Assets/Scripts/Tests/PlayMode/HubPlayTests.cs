@@ -44,8 +44,10 @@ namespace AceBarcade.PlayTests
             Assert.IsTrue(Hub.Showing);
 
             CollectionAssert.AreEqual(GameRegistry.All.Select(g => g.Id), Hub.Cards.Select(c => c.Info.Id));
-            Assert.AreEqual(Hub.Columns * Hub.VisibleRows, Hub.Cards.Count + Hub.ComingSoonCount,
-                "with fewer than 12 games, coming-soon cards fill the first screen");
+            int games = Hub.Cards.Count;
+            int slots = Mathf.Max(Hub.Columns * Hub.VisibleRows, (games + Hub.Columns - 1) / Hub.Columns * Hub.Columns);
+            Assert.AreEqual(slots, games + Hub.ComingSoonCount,
+                "coming-soon cards fill the first screen, and past that the last row");
             Assert.AreEqual("PADDLE RALLY", Hub.Cards[0].Title.text);
             Assert.AreEqual("BEST 0", Hub.Cards[0].Best.text);
             yield return PaddleRallyPlayTests.Capture("0-hub");
