@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="304" viewBox="0 0 304 304">
+<defs><clipPath id="planetb"><circle cx="152" cy="152" r="144"/></clipPath></defs>
+<circle cx="152" cy="152" r="144" fill="#2A559C"/>
+<g clip-path="url(#planetb)">
+  <circle cx="136" cy="136" r="144" fill="#3A7BD5"/>
+  <circle cx="232" cy="208" r="26" fill="#2A559C"/>
+  <circle cx="92" cy="226" r="18" fill="#2A559C"/>
+  <circle cx="196" cy="252" r="14" fill="#2A559C"/>
+  <circle cx="64" cy="132" r="14" fill="#2A559C"/>
+  <circle cx="240" cy="104" r="12" fill="#2A559C"/>
+</g>
+<ellipse cx="86" cy="62" rx="30" ry="16" transform="rotate(-38 86 62)" fill="#FFF8EC"/>
+<circle cx="152" cy="152" r="144" fill="none" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+</svg>

@@ -34,7 +34,7 @@ Each task is small enough for one session and ends with a check. Tick it off whe
 
 Unity locks the project while the editor is open, so change Project Settings through `Assets/Editor/ProjectSetup.cs` (**Tools > Ace Barcade > Apply Project Settings**) rather than the settings window or the files on disk.
 
-**Status (2026-11-18):** Games 001 to 015 are built, merged and released, and the owner has played every one on the phone: they all work (tasks 6 to 20 are ticked). The hub opens the app and the shared kit (HUD, font, input, feel, art pipeline and style check) is in place. Still open: the owner's sign-off on the look (task 3) and the hub (task 4), and sound and haptics (task 5). Games 016, **Cave Glide**, and 017, **Rain Dodge**, are merged (tasks 21 and 22) and waiting on the phone check. Next game: 018, **Ring Stop**; every game and its number is in the [games list](#games-list).
+**Status (2026-11-18):** Games 001 to 015 are built, merged and released, and the owner has played every one on the phone: they all work (tasks 6 to 20 are ticked). The hub opens the app and the shared kit (HUD, font, input, feel, art pipeline and style check) is in place. Still open: the owner's sign-off on the look (task 3) and the hub (task 4), and sound and haptics (task 5). Games 016, **Cave Glide**, 017, **Rain Dodge**, and 018, **Ring Stop**, are merged (tasks 21 to 23) and waiting on the phone check. Next game: 019, **Slice Storm**; every game and its number is in the [games list](#games-list).
 
 ### Setup
 - [x] **1. Project and repo.** Universal 2D project, identity `Tony3974`, product `Ace Barcade`, id `com.Tony3974.AceBarcade`. Android, portrait, IL2CPP ARM64, min API 24, no HDR or MSAA. Assemblies: `AceBarcade` (shared), `AceBarcade.Games`, `AceBarcade.Editor`, `AceBarcade.Tests`, `AceBarcade.PlayTests`. The core: `ArcadeGame`, `GameRegistry`, `ArcadeInput` (tap, hold, drag, swipe, Back), `ArcadeCamera` (fixed 9 x 16 view), `Scores`, `Sprites`, `Palette`, `Style`. *Check: edit mode tests pass, and the repo is on GitHub.*
@@ -219,6 +219,17 @@ Take the next game from the [games list](#games-list) (or swap the order with th
   - The leaf: grab it and the bee holds it overhead. A hit then bursts lime and the bee blinks for a moment instead of the run ending.
   - A hit without the leaf: an orange burst, a big shake, the bee tumbles onto the grass, then the game-over card.
   - By about 40 seconds it's busy, and it never feels like there was no way out.
+- [ ] **23. Game 018: Ring Stop** (on the `ring-stop` branch). A timing ring in the night sky: a yellow spark with big eyes runs round a Purple ring about a sleepy blue planet, whose eyes follow it. **Tap** while the spark is on the green arc: it scores 1, turns round and runs back the other way a little faster, and a new, slightly narrower arc pops in ahead. A tap in the arc's Lime middle is **perfect** for 1 more (PERFECT, x2, x3... for a run). Every 6th arc is teal with a gem beside it, a little narrower, worth 5. A tap off the arc, or letting the spark run past it, costs one of three lives (small sparks under the best score) and moves the arc. Our own take on the genre: from 10 hits a red thorny arc can sit on the way to the target, and a tap on it ends the run at once, lives or not. The spark speeds up from 120 to 260 degrees a second and the arc narrows from 44 to 28 degrees, both at 40 hits; red arcs come with 35% of targets at 10 hits, up to 70% at 40. **Fair by time:** a new arc's near end is always at least 0.4 s away at the spark's speed (and 50 degrees); taps are ignored for 0.25 s after a hit or a mistake, so a double tap can't cost a life; a red arc never starts within 0.25 s of the spark, and ends at least 0.2 s before the target, so a tap that early for the target is only a miss; the target counts 3 degrees past its drawn ends, a red arc only from 3 degrees inside them. Rules in `RingSim` (17 edit mode tests, including a player whose taps land within 35 ms of the middle who never loses a life in 150 hits on every seed, one within 10 ms who gets mostly perfects at top speed, one always 80 ms late who does fine at first but loses at speed, and a check that 180 ms early for the target is never on red). A play mode test hits 5 perfects and a gem, taps early once, plays on to a red arc, taps it and retries. Built; waiting on the owner's phone check. *Check, on the phone:*
+  - Ring Stop's card is in the hub with the ring icon; tapping it shows the spark at the top of the ring, a green arc on it, and the planet in the middle. Nothing moves until the first tap.
+  - The tap that starts the run sets the spark going; it doesn't count as a try.
+  - The spark runs smoothly round the ring, facing the way it goes, with orange dots trailing behind; the planet's eyes follow it.
+  - **Tap** on the green: a lime burst, a squash, and the spark turns straight round; the next arc pops in ahead. Tapping on the Lime middle shows PERFECT.
+  - Every 6th arc is teal with a gem; hitting it bursts teal with a small shake, for 5.
+  - Tapping too early, or letting it run past: a red burst, a small shake, a small spark goes from the top, and the arc moves. The third ends the run.
+  - A red thorny arc: tapping on it gives an orange burst and a big shake, and ends the run straight away. A slightly early tap for the green never lands on it.
+  - A quick double tap on a hit doesn't cost a life.
+  - Taps feel like they land when your finger touches, not when it lifts, and hits near the arc's ends look like hits.
+  - By about 40 hits it's fast and the arcs are narrow, but still hittable.
 
 ## Games list
 Every game, built or planned, with its number and id. **This list is where numbers come from.** Before starting a game, take the first planned row and mark it *In progress* here, so two branches never take the same number (Brick Burst and Rocket Lanes both reached for 003 once). Numbers are never reused, and an id never changes once the game is on the phone, because best scores are saved under it. A planned game's title and id are working names and can still change before it's built. Every game gets its own original name and look (see *Not to copy*).
@@ -242,8 +253,8 @@ Every game, built or planned, with its number and id. **This list is where numbe
 | 015 | `pop-shot` | Pop Shot | Drag | Bubble shooter: aim, shoot, and match three or more colours to pop them | Done | 20 |
 | 016 | `cave-glide` | Cave Glide | Hold | Cave flyer: hold to rise, let go to fall, through a narrowing cave | Built, on main; waiting on phone check | 21 |
 | 017 | `rain-dodge` | Rain Dodge | Drag | Dodge field: drag around falling hazards, grab pickups | Built, on main; waiting on phone check | 22 |
-| 018 | `ring-stop` | Ring Stop | Tap | Timing ring: tap when the spinning marker crosses the target | **Next** | |
-| 019 | `slice-storm` | Slice Storm | Swipe | Slicer: swipe through flying things, not the red ones | Planned | |
+| 018 | `ring-stop` | Ring Stop | Tap | Timing ring: tap when the spinning marker crosses the target | Built, on main; waiting on phone check | 23 |
+| 019 | `slice-storm` | Slice Storm | Swipe | Slicer: swipe through flying things, not the red ones | **Next** | |
 
 Planned games are in the owner's order (006 to 015), then older ideas (016 on). The "-style" notes name the genre only: each game still gets its own original name, characters and look. New ideas go at the bottom as *Planned*, with the next free number.
 
