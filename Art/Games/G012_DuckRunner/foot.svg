@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="52" height="36" viewBox="0 0 52 36">
+  <defs><clipPath id="foot"><rect x="10" y="10" width="32" height="16" rx="8"/></clipPath></defs>
+  <rect x="2" y="2" width="48" height="32" rx="16" fill="#2A2238"/>
+  <rect x="10" y="10" width="32" height="16" rx="8" fill="#C4661F"/>
+  <g clip-path="url(#foot)"><rect x="10" y="10" width="32" height="16" rx="8" transform="translate(-4 -4)" fill="#F28C38"/></g>
+</svg>

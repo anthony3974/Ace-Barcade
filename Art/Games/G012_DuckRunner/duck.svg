@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="168" height="136" viewBox="0 0 168 136">
+  <defs>
+    <clipPath id="duck">
+      <ellipse cx="72" cy="92" rx="52" ry="32"/>
+      <ellipse cx="32" cy="76" rx="18" ry="11" transform="rotate(30 32 76)"/>
+      <circle cx="112" cy="46" r="28"/>
+    </clipPath>
+    <clipPath id="beak"><rect x="128" y="44" width="26" height="18" rx="9"/></clipPath>
+  </defs>
+  <ellipse cx="32" cy="76" rx="26" ry="19" transform="rotate(30 32 76)" fill="#2A2238"/>
+  <ellipse cx="72" cy="92" rx="60" ry="40" fill="#2A2238"/>
+  <circle cx="112" cy="46" r="36" fill="#2A2238"/>
+  <rect x="120" y="36" width="42" height="34" rx="17" fill="#2A2238"/>
+  <rect x="128" y="44" width="26" height="18" rx="9" fill="#C4661F"/>
+  <g clip-path="url(#beak)"><rect x="128" y="44" width="26" height="18" rx="9" transform="translate(-4 -4)" fill="#F28C38"/></g>
+  <ellipse cx="32" cy="76" rx="18" ry="11" transform="rotate(30 32 76)" fill="#D9A21B"/>
+  <ellipse cx="72" cy="92" rx="52" ry="32" fill="#D9A21B"/>
+  <circle cx="112" cy="46" r="28" fill="#D9A21B"/>
+  <g clip-path="url(#duck)">
+    <ellipse cx="32" cy="76" rx="18" ry="11" transform="translate(-6 -6) rotate(30 32 76)" fill="#FFD23F"/>
+    <ellipse cx="72" cy="92" rx="52" ry="32" transform="translate(-6 -6)" fill="#FFD23F"/>
+    <circle cx="112" cy="46" r="28" transform="translate(-6 -6)" fill="#FFD23F"/>
+  </g>
+  <path d="M 48 90 Q 72 114 100 94" fill="none" stroke="#2A2238" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+  <rect x="38" y="72" width="22" height="16" rx="8" fill="#FFF8EC"/>
+  <ellipse cx="118" cy="40" rx="11" ry="13" fill="#FFF8EC"/>
+  <circle cx="122" cy="41" r="8" fill="#2A2238"/>
+  <ellipse cx="118" cy="40" rx="11" ry="13" fill="none" stroke="#2A2238" stroke-width="5" stroke-linejoin="round"/>
+</svg>
