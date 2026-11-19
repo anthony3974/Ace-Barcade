@@ -6,7 +6,7 @@ It's a personal project and won't be published to a store.
 
 ## Current state
 
-The app opens on the hub: a scrolling grid of game cards, two across and six down, each with the game's thumbnail, title and best score. Twenty-three games so far, listed below, numbered so similar games sit side by side; all but Cave Glide, Rain Dodge, Ring Stop, Lily Leap, Pocket Putt, Hoop Fling, Petal Swap and Slice Storm have been played on a phone. Around it is the shared kit every game uses: the HUD (score, best, pause, game-over card), the font, one-finger input, the portrait camera, best scores, game feel (squash, pop, shake, bursts) and the art pipeline with its style check. Sound is next. See [PLAN.md](PLAN.md) for what's next, [docs/STYLE.md](docs/STYLE.md) for the house style every game follows, and [docs/CONVENTIONS.md](docs/CONVENTIONS.md) for how the code is organised and how to add a game.
+The app opens on the hub: a scrolling grid of game cards, two across and six down, each with the game's thumbnail, title and best score. Twenty-four games so far, listed below, numbered so similar games sit side by side; all but Cave Glide, Rain Dodge, Ring Stop, Lily Leap, Pocket Putt, Hoop Fling, Petal Swap, Slice Storm and Pail Drop have been played on a phone. Around it is the shared kit every game uses: the HUD (score, best, pause, game-over card), the font, one-finger input, the portrait camera, best scores, game feel (squash, pop, shake, bursts) and the art pipeline with its style check. Sound is next. See [PLAN.md](PLAN.md) for what's next, [docs/STYLE.md](docs/STYLE.md) for the house style every game follows, and [docs/CONVENTIONS.md](docs/CONVENTIONS.md) for how the code is organised and how to add a game.
 
 ## Playing
 
@@ -37,6 +37,7 @@ On the phone everything is one thumb: tap, hold, drag, swipe or pull, depending 
 | 021 | Slide Nine | Tap | Tap tiles to slide them into the gap and put 1 to 8 in order. Each solve adds time; fewer moves score more. |
 | 022 | Echo Pads | Tap | Watch the lily pads light up in a tune, then tap them back in order. Each round adds a note. Three lives. |
 | 023 | Ring Stop | Tap | Tap when the spark running round the ring is on the green arc; it turns round and speeds up. Misses cost one of three lives, and a tap on red ends the run. |
+| 024 | Pail Drop | Tap | Tap to drop the critter's ball into the pail sliding along the track below; it falls straight down, so lead it. Misses cost one of three lives; tap while it holds a red thornball and it's over. |
 
 In the editor, the mouse stands in for the finger and Escape for Back. Use **Tools > Ace Barcade > Play Game...** to start in a game.
 
