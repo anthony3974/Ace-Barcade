@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="136" height="148" viewBox="0 0 136 148">
+<ellipse cx="30" cy="124" rx="22" ry="12" transform="rotate(-35 30 124)" fill="#F28C38" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+<ellipse cx="106" cy="124" rx="22" ry="12" transform="rotate(35 106 124)" fill="#F28C38" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+<ellipse cx="24" cy="70" rx="13" ry="9" transform="rotate(-30 24 70)" fill="#F28C38" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+<ellipse cx="112" cy="70" rx="13" ry="9" transform="rotate(30 112 70)" fill="#F28C38" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+<defs><clipPath id="frog"><path d="M 68 34 C 100 34 110 62 110 88 C 110 116 92 132 68 132 C 44 132 26 116 26 88 C 26 62 36 34 68 34 Z"/></clipPath></defs>
+<path d="M 68 34 C 100 34 110 62 110 88 C 110 116 92 132 68 132 C 44 132 26 116 26 88 C 26 62 36 34 68 34 Z" fill="#D9A21B"/>
+<g clip-path="url(#frog)"><path d="M 68 34 C 100 34 110 62 110 88 C 110 116 92 132 68 132 C 44 132 26 116 26 88 C 26 62 36 34 68 34 Z" transform="translate(-8 -8)" fill="#FFD23F"/></g>
+<path d="M 52 112 Q 68 120 84 112" fill="none" stroke="#D9A21B" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="38" y="66" width="22" height="16" rx="8" transform="rotate(-35 49 74)" fill="#FFF8EC"/>
+<path d="M 68 34 C 100 34 110 62 110 88 C 110 116 92 132 68 132 C 44 132 26 116 26 88 C 26 62 36 34 68 34 Z" fill="none" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+<circle cx="46" cy="38" r="20" fill="#FFD23F" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+<ellipse cx="46" cy="36" rx="11" ry="12" fill="#FFF8EC"/>
+<circle cx="46" cy="31" r="6" fill="#2A2238"/>
+<ellipse cx="46" cy="36" rx="11" ry="12" fill="none" stroke="#2A2238" stroke-width="5" stroke-linejoin="round"/>
+<circle cx="90" cy="38" r="20" fill="#FFD23F" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+<ellipse cx="90" cy="36" rx="11" ry="12" fill="#FFF8EC"/>
+<circle cx="90" cy="31" r="6" fill="#2A2238"/>
+<ellipse cx="90" cy="36" rx="11" ry="12" fill="none" stroke="#2A2238" stroke-width="5" stroke-linejoin="round"/>
+</svg>
