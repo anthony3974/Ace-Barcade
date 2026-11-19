@@ -9,6 +9,8 @@ namespace AceBarcade
         Hold,
         Drag,
         Swipe,
+        /// <summary>Drag back and let go, like a slingshot (Lily Leap, Pocket Putt, Hoop Fling).</summary>
+        Pull,
     }
 
     /// <summary>

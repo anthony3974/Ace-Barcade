@@ -6,11 +6,11 @@ It's a personal project and won't be published to a store.
 
 ## Current state
 
-The app opens on the hub: a scrolling grid of game cards, two across and six down, each with the game's thumbnail, title and best score. Eighteen games so far, listed below; all but Cave Glide, Rain Dodge and Ring Stop have been played on a phone. The numbers skip the games still to come (010 to 012, 016 and 018), so similar games sit side by side. Around it is the shared kit every game uses: the HUD (score, best, pause, game-over card), the font, one-finger input, the portrait camera, best scores, game feel (squash, pop, shake, bursts) and the art pipeline with its style check. Sound is next. See [PLAN.md](PLAN.md) for what's next, [docs/STYLE.md](docs/STYLE.md) for the house style every game follows, and [docs/CONVENTIONS.md](docs/CONVENTIONS.md) for how the code is organised and how to add a game.
+The app opens on the hub: a scrolling grid of game cards, two across and six down, each with the game's thumbnail, title and best score. Nineteen games so far, listed below; all but Cave Glide, Rain Dodge, Ring Stop and Lily Leap have been played on a phone. The numbers skip the games still to come (011, 012, 016 and 018), so similar games sit side by side. Around it is the shared kit every game uses: the HUD (score, best, pause, game-over card), the font, one-finger input, the portrait camera, best scores, game feel (squash, pop, shake, bursts) and the art pipeline with its style check. Sound is next. See [PLAN.md](PLAN.md) for what's next, [docs/STYLE.md](docs/STYLE.md) for the house style every game follows, and [docs/CONVENTIONS.md](docs/CONVENTIONS.md) for how the code is organised and how to add a game.
 
 ## Playing
 
-On the phone everything is one thumb: tap, hold, drag or swipe, depending on the game. Tap a card in the hub to play. Android's Back button pauses a game, goes back to the hub from the pause or game-over screen, and closes the app from the hub.
+On the phone everything is one thumb: tap, hold, drag, swipe or pull, depending on the game. Tap a card in the hub to play. Android's Back button pauses a game, goes back to the hub from the pause or game-over screen, and closes the app from the hub.
 
 | # | Game | Controls | How to play |
 |---|---|---|---|
@@ -23,6 +23,7 @@ On the phone everything is one thumb: tap, hold, drag or swipe, depending on the
 | 007 | Rocket Lanes | Swipe | Swipe left or right to change lanes and dodge the rows of mines. Fly through crystals for bonus points. |
 | 008 | Duck Runner | Tap, swipe down | Tap to jump over foxes, logs and turtles; swipe down to duck under hawks and hanging leaves. Jump for decoy ducks. |
 | 009 | Bounce Up | Hold | Bounce up from pad to pad; hold the left or right half of the screen to steer. Watch out for crumbling pads and red burrs. |
+| 010 | Lily Leap | Pull | Pull back to aim (the dots show where the frog lands), let go to leap from lily pad to lily pad. Purple pads drift, tan pads sink soon after you land; miss and you're in the water. Gems are worth more. |
 | 013 | Drop Stack | Tap, drag, flick | Fill rows of falling blocks to clear them. Tap to turn, drag to slide, flick down to drop. Clear gem blocks for bonus points. |
 | 014 | Stack Tower | Tap | Tap to drop each sliding floor onto the tower. Whatever hangs over is cut off; perfect drops keep it whole. |
 | 015 | Pop Shot | Drag | Drag to aim (the dots show where it goes), let go to shoot. Match three or more colours to pop them; don't let the bubbles reach the red line. |
