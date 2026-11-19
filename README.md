@@ -6,7 +6,7 @@ It's a personal project and won't be published to a store.
 
 ## Current state
 
-The app opens on the hub: a scrolling grid of game cards, two across and six down, each with the game's thumbnail, title and best score. Twenty-two games so far, listed below; all but Cave Glide, Rain Dodge, Ring Stop, Lily Leap, Pocket Putt, Hoop Fling and Petal Swap have been played on a phone. The numbers skip the game still to come (018), so similar games sit side by side. Around it is the shared kit every game uses: the HUD (score, best, pause, game-over card), the font, one-finger input, the portrait camera, best scores, game feel (squash, pop, shake, bursts) and the art pipeline with its style check. Sound is next. See [PLAN.md](PLAN.md) for what's next, [docs/STYLE.md](docs/STYLE.md) for the house style every game follows, and [docs/CONVENTIONS.md](docs/CONVENTIONS.md) for how the code is organised and how to add a game.
+The app opens on the hub: a scrolling grid of game cards, two across and six down, each with the game's thumbnail, title and best score. Twenty-three games so far, listed below, numbered so similar games sit side by side; all but Cave Glide, Rain Dodge, Ring Stop, Lily Leap, Pocket Putt, Hoop Fling, Petal Swap and Slice Storm have been played on a phone. Around it is the shared kit every game uses: the HUD (score, best, pause, game-over card), the font, one-finger input, the portrait camera, best scores, game feel (squash, pop, shake, bursts) and the art pipeline with its style check. Sound is next. See [PLAN.md](PLAN.md) for what's next, [docs/STYLE.md](docs/STYLE.md) for the house style every game follows, and [docs/CONVENTIONS.md](docs/CONVENTIONS.md) for how the code is organised and how to add a game.
 
 ## Playing
 
@@ -31,6 +31,7 @@ On the phone everything is one thumb: tap, hold, drag, swipe or pull, depending 
 | 015 | Pop Shot | Drag | Drag to aim (the dots show where it goes), let go to shoot. Match three or more colours to pop them; don't let the bubbles reach the red line. |
 | 016 | Petal Swap | Swipe | Swipe a flower to swap it with a neighbour (or tap one, then the other). Three or more in a line pop and the rest fall in; cascades are chains worth more. Popped flowers top up the clock, which only runs while the garden is still. |
 | 017 | Pop Up | Tap | Tap the green sprouts as they pop out of the stumps, but never the red spiky ones. Teal ones are worth more. Three lives. |
+| 018 | Slice Storm | Swipe | Veggies fly up from behind the crates: swipe through them to cut them in two. Three or more in one swipe is a combo. Let one fall and lose a life (three lives); cut a red thornball and it's over. |
 | 019 | Rain Dodge | Drag | Drag the bee between the red drops falling from the storm clouds; lightning warns before it strikes. Grab gems, and a leaf takes one hit for you. |
 | 020 | Noodle | Swipe | Steer a noodle round a board whose edges wrap. Eat peas to grow; don't bite yourself or the red chilies. Gems are worth more. |
 | 021 | Slide Nine | Tap | Tap tiles to slide them into the gap and put 1 to 8 in order. Each solve adds time; fewer moves score more. |
