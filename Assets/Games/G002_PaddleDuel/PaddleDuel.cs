@@ -3,13 +3,13 @@ using UnityEngine;
 namespace AceBarcade.Games.PaddleDuel
 {
     /// <summary>
-    /// Game 005. Two-paddle table tennis against the computer. Drag your paddle along the
+    /// Game 002. Two-paddle table tennis against the computer. Drag your paddle along the
     /// bottom; the computer's purple paddle guards the green goal at the top. A return scores 1,
     /// getting the ball past the computer scores 5, and you have three balls (shown under the
     /// best score). Each point won makes the serve faster and the computer sharper.
     /// Same paddle, ball and spikes as Paddle Rally. The rules live in <see cref="DuelSim"/>.
     /// </summary>
-    [ArcadeGame(5, "paddle-duel", "Paddle Duel", Controls.Drag, Blurb = "Get the ball past the computer")]
+    [ArcadeGame(2, "paddle-duel", "Paddle Duel", Controls.Drag, Blurb = "Get the ball past the computer")]
     public sealed class PaddleDuel : ArcadeGame
     {
         const float PaddleChase = 40f;

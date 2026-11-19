@@ -4,12 +4,12 @@ using UnityEngine;
 namespace AceBarcade.Games.EchoPads
 {
     /// <summary>
-    /// Game 014. Lily pads on a night pond light up in a tune; tap them back in the same order.
+    /// Game 022. Lily pads on a night pond light up in a tune; tap them back in the same order.
     /// Each round the tune comes back one note longer and a little faster, and a fifth pad joins
     /// at round 8. A yellow frog in the middle watches with you. Three lives.
     /// The rules live in <see cref="EchoSim"/>; this class draws them and adds the feel.
     /// </summary>
-    [ArcadeGame(14, "echo-pads", "Echo Pads", Controls.Tap, Blurb = "Watch the pads, then tap them back")]
+    [ArcadeGame(22, "echo-pads", "Echo Pads", Controls.Tap, Blurb = "Watch the pads, then tap them back")]
     public sealed class EchoPads : ArcadeGame
     {
         /// <summary>For tests: the seed for the next run (otherwise the clock).</summary>

@@ -4,12 +4,12 @@ using UnityEngine;
 namespace AceBarcade.Games.BounceUp
 {
     /// <summary>
-    /// Game 010. A yellow bouncer springs off every pad it lands on; hold the left or right half of
+    /// Game 009. A yellow bouncer springs off every pad it lands on; hold the left or right half of
     /// the screen to steer it up from pad to pad. The sides wrap round. Falling off the bottom or
     /// touching a red burr ends the run. Height scores 1 a unit, teal gems 5.
     /// The rules live in <see cref="BounceSim"/>; this class draws them and adds the feel.
     /// </summary>
-    [ArcadeGame(10, "bounce-up", "Bounce Up", Controls.Hold, Blurb = "Hold left or right to steer")]
+    [ArcadeGame(9, "bounce-up", "Bounce Up", Controls.Hold, Blurb = "Hold left or right to steer")]
     public sealed class BounceUp : ArcadeGame
     {
         /// <summary>For tests: the seed for the next run (otherwise the clock).</summary>

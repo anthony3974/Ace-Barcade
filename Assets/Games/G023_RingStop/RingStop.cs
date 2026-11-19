@@ -4,12 +4,12 @@ using UnityEngine;
 namespace AceBarcade.Games.RingStop
 {
     /// <summary>
-    /// Game 018. A yellow spark runs round a ring about a sleepy blue planet; tap while it's on the
+    /// Game 023. A yellow spark runs round a ring about a sleepy blue planet; tap while it's on the
     /// green arc to send it back the other way, faster, with a new arc ahead. Taps off the arc, or
     /// letting it run past, cost one of three lives; a tap on a red thorn arc ends the run.
     /// The rules live in <see cref="RingSim"/>; this class draws them and adds the feel.
     /// </summary>
-    [ArcadeGame(18, "ring-stop", "Ring Stop", Controls.Tap, Blurb = "Tap when the spark is on the green")]
+    [ArcadeGame(23, "ring-stop", "Ring Stop", Controls.Tap, Blurb = "Tap when the spark is on the green")]
     public sealed class RingStop : ArcadeGame
     {
         /// <summary>For tests: the seed for the next run (otherwise the clock).</summary>

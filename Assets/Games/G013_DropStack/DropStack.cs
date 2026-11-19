@@ -3,12 +3,12 @@ using UnityEngine;
 namespace AceBarcade.Games.DropStack
 {
     /// <summary>
-    /// Game 002. Blocks fall into a well; fill a row to clear it. Tap to turn the piece, drag to
+    /// Game 013. Blocks fall into a well; fill a row to clear it. Tap to turn the piece, drag to
     /// slide it (one column per block-width of finger travel), drag down to drop it faster, and
     /// flick down to drop it all the way. Gem blocks pay a bonus when their row clears.
     /// The rules live in <see cref="DropSim"/>; this class draws them and adds the feel.
     /// </summary>
-    [ArcadeGame(2, "drop-stack", "Drop Stack", Controls.Drag, Blurb = "Fill a row to clear it")]
+    [ArcadeGame(13, "drop-stack", "Drop Stack", Controls.Drag, Blurb = "Fill a row to clear it")]
     public sealed class DropStack : ArcadeGame
     {
         /// <summary>One cell, in units (a block sprite is 108 px at 120 px per unit).</summary>

@@ -4,13 +4,13 @@ using UnityEngine;
 namespace AceBarcade.Games.DuckRunner
 {
     /// <summary>
-    /// Game 012. A duck runs along a riverbank at night. Tap to jump over foxes, cattails, logs
+    /// Game 008. A duck runs along a riverbank at night. Tap to jump over foxes, cattails, logs
     /// and snapping turtles; swipe down to duck under hawks and hanging branches (holding the
     /// finger down keeps ducking). Each obstacle passed scores 1, and a teal decoy duck floating
     /// over a gap scores 5. The run speeds up as it goes, to a cap.
     /// The rules live in <see cref="DuckSim"/>; this class draws them and adds the feel.
     /// </summary>
-    [ArcadeGame(12, "duck-runner", "Duck Runner", Controls.Tap, Blurb = "Tap to jump, swipe down to duck")]
+    [ArcadeGame(8, "duck-runner", "Duck Runner", Controls.Tap, Blurb = "Tap to jump, swipe down to duck")]
     public sealed class DuckRunner : ArcadeGame
     {
         /// <summary>For tests: the seed for the next run (otherwise the clock).</summary>

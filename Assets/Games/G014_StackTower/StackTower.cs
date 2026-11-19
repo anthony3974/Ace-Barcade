@@ -5,12 +5,12 @@ using UnityEngine;
 namespace AceBarcade.Games.StackTower
 {
     /// <summary>
-    /// Game 013. A block slides across the top of a tower at night; tap to drop it. Whatever hangs
+    /// Game 014. A block slides across the top of a tower at night; tap to drop it. Whatever hangs
     /// over the floor below is cut off and falls, so the tower narrows; a perfect drop keeps it
     /// whole, and a run of them widens it again. Missing the tower ends the run.
     /// The rules live in <see cref="StackSim"/>; this class draws them and adds the feel.
     /// </summary>
-    [ArcadeGame(13, "stack-tower", "Stack Tower", Controls.Tap, Blurb = "Tap to drop each floor in line")]
+    [ArcadeGame(14, "stack-tower", "Stack Tower", Controls.Tap, Blurb = "Tap to drop each floor in line")]
     public sealed class StackTower : ArcadeGame
     {
         const float H = StackSim.FloorHeight;

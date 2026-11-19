@@ -3,12 +3,12 @@ using UnityEngine;
 namespace AceBarcade.Games.PopUp
 {
     /// <summary>
-    /// Game 009. Critters pop out of nine hollow stumps. Tap the green sprouts (1) and the quick
+    /// Game 017. Critters pop out of nine hollow stumps. Tap the green sprouts (1) and the quick
     /// teal ones (5); a sprout that gets away costs one of three lives, and tapping a red spiky
     /// one ends the run. The rules live in <see cref="PopSim"/>; this class draws them and adds
     /// the feel.
     /// </summary>
-    [ArcadeGame(9, "pop-up", "Pop Up", Controls.Tap, Blurb = "Tap the green ones, never the red")]
+    [ArcadeGame(17, "pop-up", "Pop Up", Controls.Tap, Blurb = "Tap the green ones, never the red")]
     public sealed class PopUp : ArcadeGame
     {
         /// <summary>For tests: the seed for the next run (otherwise the clock).</summary>
