@@ -6,7 +6,7 @@ It's a personal project and won't be published to a store.
 
 ## Current state
 
-The app opens on the hub: a scrolling grid of game cards, two across and six down, each with the game's thumbnail, title and best score. Twenty games so far, listed below; all but Cave Glide, Rain Dodge, Ring Stop, Lily Leap and Pocket Putt have been played on a phone. The numbers skip the games still to come (012, 016 and 018), so similar games sit side by side. Around it is the shared kit every game uses: the HUD (score, best, pause, game-over card), the font, one-finger input, the portrait camera, best scores, game feel (squash, pop, shake, bursts) and the art pipeline with its style check. Sound is next. See [PLAN.md](PLAN.md) for what's next, [docs/STYLE.md](docs/STYLE.md) for the house style every game follows, and [docs/CONVENTIONS.md](docs/CONVENTIONS.md) for how the code is organised and how to add a game.
+The app opens on the hub: a scrolling grid of game cards, two across and six down, each with the game's thumbnail, title and best score. Twenty-one games so far, listed below; all but Cave Glide, Rain Dodge, Ring Stop, Lily Leap, Pocket Putt and Hoop Fling have been played on a phone. The numbers skip the games still to come (016 and 018), so similar games sit side by side. Around it is the shared kit every game uses: the HUD (score, best, pause, game-over card), the font, one-finger input, the portrait camera, best scores, game feel (squash, pop, shake, bursts) and the art pipeline with its style check. Sound is next. See [PLAN.md](PLAN.md) for what's next, [docs/STYLE.md](docs/STYLE.md) for the house style every game follows, and [docs/CONVENTIONS.md](docs/CONVENTIONS.md) for how the code is organised and how to add a game.
 
 ## Playing
 
@@ -25,6 +25,7 @@ On the phone everything is one thumb: tap, hold, drag, swipe or pull, depending 
 | 009 | Bounce Up | Hold | Bounce up from pad to pad; hold the left or right half of the screen to steer. Watch out for crumbling pads and red burrs. |
 | 010 | Lily Leap | Pull | Pull back to aim (the dots show where the frog lands), let go to leap from lily pad to lily pad. Purple pads drift, tan pads sink soon after you land; miss and you're in the water. Gems are worth more. |
 | 011 | Pocket Putt | Pull | Mini golf, one hole per screen. Pull back to aim (the dots show the way and how hard), let go to putt. Sink it in 1, 2 or 3 putts for 3, 2 or 1 points; bumpers kick, sand slows, red water loses the hole. Three lives. |
+| 012 | Hoop Fling | Pull | Pull back to aim (the dots show the start of the arc), let go to fling the ball at the hoop. 2 a basket, 3 for a swish that touches nothing. The hoop moves after every basket, then bobs and slides. Three misses end it. |
 | 013 | Drop Stack | Tap, drag, flick | Fill rows of falling blocks to clear them. Tap to turn, drag to slide, flick down to drop. Clear gem blocks for bonus points. |
 | 014 | Stack Tower | Tap | Tap to drop each sliding floor onto the tower. Whatever hangs over is cut off; perfect drops keep it whole. |
 | 015 | Pop Shot | Drag | Drag to aim (the dots show where it goes), let go to shoot. Match three or more colours to pop them; don't let the bubbles reach the red line. |
