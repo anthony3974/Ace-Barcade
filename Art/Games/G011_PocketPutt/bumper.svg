@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+<defs><clipPath id="bump"><circle cx="60" cy="60" r="50"/></clipPath></defs>
+<circle cx="60" cy="60" r="50" fill="#2A559C"/>
+<g clip-path="url(#bump)"><circle cx="60" cy="60" r="50" transform="translate(-9 -9)" fill="#3A7BD5"/></g>
+<circle cx="60" cy="60" r="24" fill="#5BC0EB" stroke="#2A2238" stroke-width="5" stroke-linejoin="round"/>
+<rect x="24" y="30" width="22" height="16" rx="8" transform="rotate(-40 35 38)" fill="#FFF8EC"/>
+<circle cx="60" cy="60" r="50" fill="none" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="360" viewBox="0 0 360 360">
+<defs><clipPath id="card"><rect x="8" y="8" width="344" height="344" rx="56"/></clipPath></defs>
+<rect x="8" y="8" width="344" height="344" rx="56" fill="#3B3355"/>
+<g clip-path="url(#card)">
+<rect x="40" y="40" width="280" height="300" fill="#A0663F" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+<rect x="64" y="64" width="232" height="300" fill="#5C5A78"/>
+<rect x="64" y="64" width="232" height="300" fill="none" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+<circle cx="236" cy="124" r="26" fill="#2A2238"/>
+<circle cx="236" cy="124" r="17" fill="#3B3355"/>
+<g transform="translate(206 0)">
+<path d="M 36 14 L 92 34 L 36 56 Z" fill="#2A7F45"/>
+<path d="M 36 14 L 92 34 L 36 44 Z" fill="#3FAE5A"/>
+<path d="M 36 14 L 92 34 L 36 56 Z" fill="none" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+<rect x="24" y="8" width="14" height="126" rx="7" fill="#FFF8EC" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+</g>
+<g transform="translate(70 120) scale(0.8)">
+<defs><clipPath id="bi"><circle cx="60" cy="60" r="50"/></clipPath></defs>
+<circle cx="60" cy="60" r="50" fill="#2A559C"/>
+<g clip-path="url(#bi)"><circle cx="60" cy="60" r="50" transform="translate(-9 -9)" fill="#3A7BD5"/></g>
+<circle cx="60" cy="60" r="24" fill="#5BC0EB" stroke="#2A2238" stroke-width="5" stroke-linejoin="round"/>
+<rect x="24" y="30" width="22" height="16" rx="8" transform="rotate(-40 35 38)" fill="#FFF8EC"/>
+<circle cx="60" cy="60" r="50" fill="none" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+</g>
+<circle cx="196" cy="200" r="8" fill="#E4E6F0"/>
+<circle cx="178" cy="226" r="8" fill="#E4E6F0"/>
+<circle cx="160" cy="252" r="8" fill="#E4E6F0"/>
+<g transform="translate(108 258) scale(1.4)">
+<circle cx="36" cy="36" r="30" fill="#E4E6F0"/>
+<circle cx="32" cy="32" r="24" fill="#FFF8EC"/>
+<circle cx="36" cy="36" r="30" fill="none" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+</g>
+</g>
+<rect x="8" y="8" width="344" height="344" rx="56" fill="none" stroke="#2A2238" stroke-width="8" stroke-linejoin="round"/>
+</svg>
