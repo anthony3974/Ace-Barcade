@@ -260,7 +260,13 @@ Every game, built or planned, with its number and id. **This list is where numbe
 | 022 | `echo-pads` | Echo Pads | Tap | Memory pattern: Simon-style coloured pads light up in a growing sequence; tap it back | Done | 19 |
 | 023 | `ring-stop` | Ring Stop | Tap | Timing ring: tap when the spinning marker crosses the target | Built, on main; waiting on phone check | 23 |
 
-The numbers put similar games side by side in pairs, the owner's order (2026-11-18): Paddle Rally and Paddle Duel, Brick Burst and Star Swarm, Wing It and Cave Glide, Rocket Lanes and Duck Runner, Bounce Up and Lily Leap, Pocket Putt and Hoop Fling, Drop Stack and Stack Tower, Pop Shot and Petal Swap, Pop Up and Slice Storm, Rain Dodge and Noodle, Slide Nine and Echo Pads, then Ring Stop on its own. Build the planned games in number order. Lily Leap, Pocket Putt and Hoop Fling (010 to 012) use a new **Pull** control (drag back, let go): add `Pull` to the `Controls` enum (`Assets/Scripts/Core/ArcadeGameAttribute.cs`) with the first of them. The "-style" notes name the genre only: each game still gets its own original name, characters and look. New ideas go at the bottom as *Planned*, with the next free number (024 on).
+The numbers put similar games side by side in pairs, the owner's order (2026-11-18): Paddle Rally and Paddle Duel, Brick Burst and Star Swarm, Wing It and Cave Glide, Rocket Lanes and Duck Runner, Bounce Up and Lily Leap, Pocket Putt and Hoop Fling, Drop Stack and Stack Tower, Pop Shot and Petal Swap, Pop Up and Slice Storm, Rain Dodge and Noodle, Slide Nine and Echo Pads, then Ring Stop on its own. Build the planned games in number order. Lily Leap, Pocket Putt and Hoop Fling (010 to 012) use a new **Pull** control (drag back, let go): add `Pull` to the `Controls` enum (`Assets/Scripts/Core/ArcadeGameAttribute.cs`) with the first of them. The "-style" notes name the genre only: each game still gets its own original name, characters and look. 
+
+**Keep the pairs (the owner's rule, 2026-11-18).** The hub is two cards across, so an odd number is the left card of a row and the next even number sits beside it: 001 and 002, 003 and 004, and so on. Every row is a pair of similar games, and new games keep it that way:
+- **024 is the partner for Ring Stop (023),** so the next idea added should be a game like it (one-tap timing). Until one is planned, 024 stays free.
+- **After that, new ideas come in pairs:** two similar games take the next odd and even numbers together (025 and 026, then 027 and 028).
+- **A lone idea with no partner yet** waits in *Maybe later* until a similar one turns up, rather than taking a number by itself.
+- When adding ideas, show the owner the new rows as a two-column table (left, right) like the one this order came from.
 
 ## Maybe later
 - A daily challenge game with its own leaderboard on the phone.
