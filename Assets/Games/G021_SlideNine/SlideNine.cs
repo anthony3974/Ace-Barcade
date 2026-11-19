@@ -4,12 +4,12 @@ using UnityEngine;
 namespace AceBarcade.Games.SlideNine
 {
     /// <summary>
-    /// Game 006. A 3 x 3 sliding puzzle against the clock. Tap a tile in the gap's row or column
+    /// Game 021. A 3 x 3 sliding puzzle against the clock. Tap a tile in the gap's row or column
     /// to slide it; put 1 to 8 in order to solve. Each solve scores 10 plus up to 10 for few
     /// moves and adds 15 seconds, then a harder puzzle comes. The run ends when time runs out.
     /// Tiles in their own cell turn green. The rules live in <see cref="SlideSim"/>.
     /// </summary>
-    [ArcadeGame(6, "slide-nine", "Slide Nine", Controls.Tap, Blurb = "Solve as many as you can before time runs out")]
+    [ArcadeGame(21, "slide-nine", "Slide Nine", Controls.Tap, Blurb = "Solve as many as you can before time runs out")]
     public sealed class SlideNine : ArcadeGame
     {
         public const float BoardY = -0.4f;

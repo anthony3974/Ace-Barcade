@@ -4,12 +4,12 @@ using UnityEngine;
 namespace AceBarcade.Games.CaveGlide
 {
     /// <summary>
-    /// Game 016. Hold to lift a yellow paper glider through a winding cave; let go to sink.
+    /// Game 006. Hold to lift a yellow paper glider through a winding cave; let go to sink.
     /// The rock is safe to bump along; the red crystals growing from it are not. Every 2 units
     /// scores 1, and teal gems along the way score 5. It gets faster and narrower, to a cap.
     /// The rules live in <see cref="CaveSim"/>; this class draws them and adds the feel.
     /// </summary>
-    [ArcadeGame(16, "cave-glide", "Cave Glide", Controls.Hold, Blurb = "Hold to rise, let go to sink")]
+    [ArcadeGame(6, "cave-glide", "Cave Glide", Controls.Hold, Blurb = "Hold to rise, let go to sink")]
     public sealed class CaveGlide : ArcadeGame
     {
         /// <summary>For tests: the seed for the next run (otherwise the clock).</summary>

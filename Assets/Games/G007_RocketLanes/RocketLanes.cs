@@ -4,12 +4,12 @@ using UnityEngine;
 namespace AceBarcade.Games.RocketLanes
 {
     /// <summary>
-    /// Game 004. A rocket flies up through three lanes while rows of red mines scroll down at
+    /// Game 007. A rocket flies up through three lanes while rows of red mines scroll down at
     /// it. Swipe left or right to change lanes; every row passed scores 1 and teal crystals in
     /// open lanes score 5. The scroll speeds up with every row, up to a cap.
     /// The rules live in <see cref="RocketLanesSim"/>; this class draws them and adds the feel.
     /// </summary>
-    [ArcadeGame(4, "rocket-lanes", "Rocket Lanes", Controls.Swipe, Blurb = "Swipe between lanes to dodge the mines")]
+    [ArcadeGame(7, "rocket-lanes", "Rocket Lanes", Controls.Swipe, Blurb = "Swipe between lanes to dodge the mines")]
     public sealed class RocketLanes : ArcadeGame
     {
         /// <summary>For tests: the seed for the next run's rows (otherwise the clock).</summary>

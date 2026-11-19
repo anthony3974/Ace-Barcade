@@ -4,12 +4,12 @@ using UnityEngine;
 namespace AceBarcade.Games.WingIt
 {
     /// <summary>
-    /// Game 008. Tap to flap a bee through the gaps in thorny red columns, over a floor of spikes.
+    /// Game 005. Tap to flap a bee through the gaps in thorny red columns, over a floor of spikes.
     /// Each column passed scores 1; a teal gem in every 4th gap scores 5. The columns come faster
     /// and their gaps get narrower, up to a cap.
     /// The rules live in <see cref="WingSim"/>; this class draws them and adds the feel.
     /// </summary>
-    [ArcadeGame(8, "wing-it", "Wing It", Controls.Tap, Blurb = "Tap to flap through the gaps")]
+    [ArcadeGame(5, "wing-it", "Wing It", Controls.Tap, Blurb = "Tap to flap through the gaps")]
     public sealed class WingIt : ArcadeGame
     {
         /// <summary>For tests: the seed for the next run (otherwise the clock).</summary>

@@ -4,12 +4,12 @@ using UnityEngine;
 namespace AceBarcade.Games.Noodle
 {
     /// <summary>
-    /// Game 007. A yellow noodle crawls over a board whose edges wrap round. Swipe (or drag) to
+    /// Game 020. A yellow noodle crawls over a board whose edges wrap round. Swipe (or drag) to
     /// steer it; each green pea scores 1 and makes it longer and faster, teal gems score 5, and
     /// crawling into a red chili or into itself ends the run.
     /// The rules live in <see cref="NoodleSim"/>; this class draws them and adds the feel.
     /// </summary>
-    [ArcadeGame(7, "noodle", "Noodle", Controls.Swipe, Blurb = "Eat the peas, not the chilies or your own tail")]
+    [ArcadeGame(20, "noodle", "Noodle", Controls.Swipe, Blurb = "Eat the peas, not the chilies or your own tail")]
     public sealed class Noodle : ArcadeGame
     {
         /// <summary>For tests: the seed for the next run (otherwise the clock).</summary>

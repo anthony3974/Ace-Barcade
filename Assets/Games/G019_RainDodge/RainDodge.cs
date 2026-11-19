@@ -4,12 +4,12 @@ using UnityEngine;
 namespace AceBarcade.Games.RainDodge
 {
     /// <summary>
-    /// Game 017. Drag anywhere to fly a yellow bee around a stormy field while red drops fall
+    /// Game 019. Drag anywhere to fly a yellow bee around a stormy field while red drops fall
     /// from the clouds. Every drop that reaches the ground scores 1, teal gems score 5, and a
     /// green leaf takes one hit for the bee. Big drops, swaying drops and lightning join in.
     /// The rules live in <see cref="RainSim"/>; this class draws them and adds the feel.
     /// </summary>
-    [ArcadeGame(17, "rain-dodge", "Rain Dodge", Controls.Drag, Blurb = "Drag the bee between the drops")]
+    [ArcadeGame(19, "rain-dodge", "Rain Dodge", Controls.Drag, Blurb = "Drag the bee between the drops")]
     public sealed class RainDodge : ArcadeGame
     {
         /// <summary>For tests: the seed for the next run (otherwise the clock).</summary>

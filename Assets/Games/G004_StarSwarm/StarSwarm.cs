@@ -4,11 +4,11 @@ using UnityEngine;
 namespace AceBarcade.Games.StarSwarm
 {
     /// <summary>
-    /// Game 011. Drag to slide a yellow ship along the bottom; it fires on its own. Waves of red
+    /// Game 004. Drag to slide a yellow ship along the bottom; it fires on its own. Waves of red
     /// drones and brutes sway above, drop bullets and dive at the ship. Three lives.
     /// The rules live in <see cref="StarSim"/>; this class draws them and adds the feel.
     /// </summary>
-    [ArcadeGame(11, "star-swarm", "Star Swarm", Controls.Drag, Blurb = "Slide to dodge, it shoots for you")]
+    [ArcadeGame(4, "star-swarm", "Star Swarm", Controls.Drag, Blurb = "Slide to dodge, it shoots for you")]
     public sealed class StarSwarm : ArcadeGame
     {
         /// <summary>For tests: the seed for the next run (otherwise the clock).</summary>
